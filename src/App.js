@@ -53,7 +53,7 @@ const Projects = () => (
 const Contact = () => (
     <section>
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:ellenhalvardsson@gmail.com">ellen@example.com</a></p>
+      <p>Email: <a href="mailto:ellenhalvardsson@gmail.com">ellenhalvardsson@gmail.com</a></p>
       <p>LinkedIn: <a href="https://www.linkedin.com/in/ellen-halv/" target="_blank" rel="noopener noreferrer">Ellen Halvardsson</a></p>
     </section>
 );

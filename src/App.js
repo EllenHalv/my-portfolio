@@ -40,15 +40,16 @@ function App() {
             <ul>
               {projects.map((project, index) => (
                   <li key={index}>
-                      <h3>{project.name}</h3>
-                      <p>{project.description}</p>
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
-                          See more on GitHub
-                      </a>
-                      <br/>
+                    <h3>{project.name}</h3>
+                    <p>{project.description}</p>
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                      See more on GitHub
+                    </a>
+
                   </li>
               ))}
             </ul>
+            <br/>
           </section>
         </main>
       </div>

@@ -71,7 +71,6 @@ body {
   background-color: #000; }
 
 .background-section {
-  background-image: url('./squirrel.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

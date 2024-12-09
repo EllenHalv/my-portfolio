@@ -34,13 +34,6 @@ const projects = [
 ];
 
 // Pages
-const Home = () =>
-    //<section><h2>Welcome to My Portfolio</h2></section>;
-    <div className="background-section">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Explore my projects and take a look at my resume!</p>
-    </div>
-
 const Projects = () => (
     <section>
         <h2>Projects <FontAwesomeIcon icon={faProjectDiagram}/></h2>
@@ -88,12 +81,26 @@ const CV = () => (
 // Main Component
 function App() {
     return (
+
         <Router>
             <div className="bg-dark text-white" style={{minHeight: '100vh'}}>
+                <div className="background-section"
+                 style={{
+                     backgroundImage: `url(${process.env.PUBLIC_URL}/squirrel.jpg)`,
+                     backgroundSize: "cover",
+                     backgroundPosition: "center",
+                     backgroundAttachment: "fixed",
+                     padding: "50px",
+                     textAlign: "center",
+                     color: "white",
+                 }}
+                >
+                    <h1>Welcome to My Portfolio</h1>
+                    <p>Explore my projects and take a look at my resume!</p>
+                </div>
                 <HeaderComponent/>
                 <main className="container mt-4">
                     <Routes>
-                        <Route path="/my-portfolio" element={<Home/>}/>
                         <Route path="/projects" element={<Projects projects={projects}/>}/>
                         <Route path="/cv" element={<CV/>}/>
                         <Route path="/contact" element={<Contact/>}/>

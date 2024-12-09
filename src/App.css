@@ -71,12 +71,16 @@ body {
   background-color: #000; }
 
 .background-section {
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  padding: 50px;
+  background-size: contain; /* Gör så att hela bilden visas */
+  background-position: center center; /* Centrerar bilden horisontellt och vertikalt */
+  background-repeat: no-repeat; /* Förhindrar att bilden upprepas */
+  min-height: 100vh; /* Gör sektionen lika hög som fönstret */
+  display: flex; /* Centrerar innehåll i sektionen */
+  align-items: center; /* Vertikal centrering */
+  justify-content: center; /* Horisontell centrering */
+  color: white; /* För läsbarhet */
   text-align: center;
-  color: white;
+  padding: 20px;
 }
 
 [tabindex="-1"]:focus {

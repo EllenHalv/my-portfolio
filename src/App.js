@@ -4,6 +4,7 @@ import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEnvelope, faFileAlt, faProjectDiagram} from '@fortawesome/free-solid-svg-icons';
 import HeaderComponent from './components/HeaderComponent';
+import squirrelImage from './assets/images/squirrel.jpg';
 
 const projects = [
     {
@@ -86,13 +87,7 @@ function App() {
             <div className="bg-dark text-white" style={{minHeight: '100vh'}}>
                 <div className="background-section"
                  style={{
-                     backgroundImage: `url(${process.env.PUBLIC_URL}/squirrel.jpg)`,
-                     backgroundSize: "cover",
-                     backgroundPosition: "center",
-                     backgroundAttachment: "fixed",
-                     padding: "50px",
-                     textAlign: "center",
-                     color: "white",
+                     backgroundImage: `url(${squirrelImage})`,
                  }}
                 >
                     <h1>Welcome to My Portfolio</h1>

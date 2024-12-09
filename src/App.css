@@ -70,14 +70,14 @@ body {
   text-align: center;
   background-color: #000; }
 
-/*.background-section {
+.background-section {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   padding: 50px;
   text-align: center;
   color: white;
-}*/
+}
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }

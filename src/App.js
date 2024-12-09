@@ -85,24 +85,23 @@ function App() {
 
         <Router>
             <div className="bg-dark text-white" style={{minHeight: '100vh'}}>
-                {/*<div className="background-section"
+                <div className="background-section"
                  style={{
                      backgroundImage: `url(${squirrelImage})`,
                  }}
-                >*/}
+                >
                     <h1>Welcome to My Portfolio</h1>
                     <p>Explore my projects and take a look at my resume!</p>
                 </div>
                 <HeaderComponent/>
                 <main className="container mt-4">
                     <Routes>
-                        {/*<Route path="/my-portfolio" element={<App/>}/>*/}
                         <Route path="/projects" element={<Projects projects={projects}/>}/>
                         <Route path="/cv" element={<CV/>}/>
                         <Route path="/contact" element={<Contact/>}/>
                     </Routes>
                 </main>
-            {/*</div>*/}
+            </div>
         </Router>
     );
 }

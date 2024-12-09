@@ -61,14 +61,14 @@ const Contact = () => (
 const CV = () => (
     <section>
       <h2>My CV</h2>
-      <p>Download my CV: <a href="/cv.pdf" download>Click here</a></p>
+        <p>Download my CV: <a href={`${process.env.PUBLIC_URL}/cv.pdf`} download>Click here</a></p>
     </section>
 );
 
 // Main Component
 function App() {
-  return (
-      <Router>
+    return (
+        <Router>
         <div>
           <header>
             <h1>Ellen Halvardsson - Portfolio</h1>

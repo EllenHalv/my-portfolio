@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faFileAlt, faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
+import HeaderComponent from './HeaderComponent';
 
 const projects = [
   {
@@ -33,6 +34,8 @@ const projects = [
 ];
 
 // Pages
+const Home = () => <section><h2>Welcome to My Portfolio</h2></section>;
+
 const Projects = () => (
     <section>
       <h2>Projects</h2>
@@ -69,27 +72,17 @@ const CV = () => (
 function App() {
     return (
         <Router>
-        <div>
-          <header>
-            <h1>Ellen Halvardsson - Portfolio</h1>
-              <nav>
-                  <ul>
-                      <li><Link to="/"><FontAwesomeIcon icon={faProjectDiagram}/> Projects</Link></li>
-                      <li><Link to="/contact"><FontAwesomeIcon icon={faEnvelope}/> Contact</Link></li>
-                      <li><Link to="/cv"><FontAwesomeIcon icon={faFileAlt}/> My CV</Link></li>
-                  </ul>
-              </nav>
-          </header>
-            <main>
+            <HeaderComponent />
+            <main className="container mt-4">
                 <Routes>
-                    <Route path="/" element={<Projects/>}/>
-                    <Route path="/contact" element={<Contact/>}/>
-                    <Route path="/cv" element={<CV/>}/>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/projects" element={<Projects projects={projects} />} />
+                    <Route path="/cv" element={<CV />} />
+                    <Route path="/contact" element={<Contact />} />
                 </Routes>
             </main>
-        </div>
-      </Router>
-  );
+        </Router>
+    );
 }
 
 export default App;

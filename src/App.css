@@ -80,7 +80,7 @@ body {
 }*/
 
 .background-section {
-  background-image: url('https://www.pexels.com/photo/a-squirrel-on-big-rock-14027146/');
+  background-image: url(https://www.pexels.com/photo/a-squirrel-on-big-rock-14027146/);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

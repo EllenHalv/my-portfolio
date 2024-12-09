@@ -36,15 +36,16 @@ const projects = [
 // Pages
 const Home = () =>
     //<section><h2>Welcome to My Portfolio</h2></section>;
-    <div className="glass">
+    <div className="background-section">
         <h1>Welcome to My Portfolio</h1>
-        <p>This is a cool glass effect for the content section.</p>
+        <p>Explore my projects and take a look at my resume!</p>
     </div>
-
 
 const Projects = () => (
     <section>
         <h2>Projects</h2>
+        <FontAwesomeIcon icon={faProjectDiagram}/>
+        <div className="glass">
         <ul>
             {projects.map((project, index) => (
                 <li key={index}>
@@ -56,23 +57,32 @@ const Projects = () => (
                 </li>
             ))}
         </ul>
+        </div>
     </section>
 );
 
 const Contact = () => (
     <section>
         <h2>Contact</h2>
+        <div className="glass">
+        <FontAwesomeIcon icon={faEnvelope}/>
+        <p>Feel free to contact me!</p>
         <p>Email: <a href="mailto:ellenhalvardsson@gmail.com">ellenhalvardsson@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/ellen-halv/" target="_blank" rel="noopener noreferrer">Ellen
             Halvardsson</a></p>
+        </div>
     </section>
 );
 
 const CV = () => (
     <section>
         <h2>My CV</h2>
+        <div className="glass">
+        <FontAwesomeIcon icon={faFileAlt}/>
+        <p>Here you can download my CV</p>
         <p>Download my CV: <a href={`${process.env.PUBLIC_URL}/cv.pdf`} download>Click here</a></p>
-    </section>
+        </div>
+        </section>
 );
 
 // Main Component

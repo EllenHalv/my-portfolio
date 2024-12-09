@@ -70,6 +70,25 @@ body {
   text-align: left;
   background-color: #000; }
 
+/*body {
+  background-image: url(https://www.pexels.com/photo/a-squirrel-on-big-rock-14027146/);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  margin: 0;
+}*/
+
+.background-section {
+  background-image: url('https://www.pexels.com/photo/a-squirrel-on-big-rock-14027146/');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 50px;
+  text-align: center;
+  color: white;
+}
+
 [tabindex="-1"]:focus {
   outline: 0 !important; }
 

@@ -1,6 +1,8 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faFileAlt, faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
 
 const projects = [
   {
@@ -70,21 +72,21 @@ function App() {
         <div>
           <header>
             <h1>Ellen Halvardsson - Portfolio</h1>
-            <nav>
-              <ul>
-                <li><Link to="/">Projects</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
-                <li><Link to="/cv">My CV</Link></li>
-              </ul>
-            </nav>
+              <nav>
+                  <ul>
+                      <li><Link to="/"><FontAwesomeIcon icon={faProjectDiagram}/> Projects</Link></li>
+                      <li><Link to="/contact"><FontAwesomeIcon icon={faEnvelope}/> Contact</Link></li>
+                      <li><Link to="/cv"><FontAwesomeIcon icon={faFileAlt}/> My CV</Link></li>
+                  </ul>
+              </nav>
           </header>
-          <main>
-            <Routes>
-              <Route path="/" element={<Projects />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/cv" element={<CV />} />
-            </Routes>
-          </main>
+            <main>
+                <Routes>
+                    <Route path="/" element={<Projects/>}/>
+                    <Route path="/contact" element={<Contact/>}/>
+                    <Route path="/cv" element={<CV/>}/>
+                </Routes>
+            </main>
         </div>
       </Router>
   );

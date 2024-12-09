@@ -5741,3 +5741,12 @@ a.text-dark:hover, a.text-dark:focus {
 
 .navbar-dark.bg-primary {
   background-color: #111111 !important; }
+
+/* Lägg till animering för menyn */
+nav ul li a {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+  transform: scale(1.1);
+}

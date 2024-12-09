@@ -43,29 +43,30 @@ const Home = () =>
 
 const Projects = () => (
     <section>
-        <h2>Projects</h2>
-        <FontAwesomeIcon icon={faProjectDiagram}/>
-        <div className="glass">
+        <h2>Projects <FontAwesomeIcon icon={faProjectDiagram}/></h2>
+
         <ul>
             {projects.map((project, index) => (
-                <li key={index}>
-                    <h3>{project.name}</h3>
-                    <p>{project.description}</p>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        See more on GitHub
-                    </a>
-                </li>
-            ))}
-        </ul>
-        </div>
+                <div className="glass">
+                    <li key={index}>
+                        <h3>{project.name}</h3>
+                        <p>{project.description}</p>
+                        <a href={project.github} target="_blank" rel="noopener noreferrer">
+                            See more on GitHub
+                        </a>
+                    </li>
+                </div>
+                    ))}
+                </ul>
+
     </section>
 );
 
 const Contact = () => (
     <section>
-        <h2>Contact</h2>
+        <h2>Contact <FontAwesomeIcon icon={faEnvelope}/></h2>
         <div className="glass">
-        <FontAwesomeIcon icon={faEnvelope}/>
+
         <p>Feel free to contact me!</p>
         <p>Email: <a href="mailto:ellenhalvardsson@gmail.com">ellenhalvardsson@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/ellen-halv/" target="_blank" rel="noopener noreferrer">Ellen
@@ -76,9 +77,8 @@ const Contact = () => (
 
 const CV = () => (
     <section>
-        <h2>My CV</h2>
+        <h2>My Resume/CV <FontAwesomeIcon icon={faFileAlt}/></h2>
         <div className="glass">
-        <FontAwesomeIcon icon={faFileAlt}/>
         <p>Here you can download my CV</p>
         <p>Download my CV: <a href={`${process.env.PUBLIC_URL}/cv.pdf`} download>Click here</a></p>
         </div>
@@ -93,7 +93,7 @@ function App() {
                 <HeaderComponent/>
                 <main className="container mt-4">
                     <Routes>
-                        <Route path="/" element={<Home/>}/>
+                        <Route path="/my-portfolio" element={<Home/>}/>
                         <Route path="/projects" element={<Projects projects={projects}/>}/>
                         <Route path="/cv" element={<CV/>}/>
                         <Route path="/contact" element={<Contact/>}/>

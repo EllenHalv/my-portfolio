@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const HeaderComponent = () => {
     return (
-        <header className="dropdown-header">
+        <header className="main-header">
             <nav className="navbar navbar-expand-md navbar-dark bg-dark">
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/">Home</Link>
@@ -11,7 +11,7 @@ const HeaderComponent = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav ms-auto">
+                        <ul className="navbar-nav">
                             <li className="nav-item">
                                 <Link className="nav-link" to="/projects">Projects</Link>
                             </li>

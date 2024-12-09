@@ -72,7 +72,7 @@ body {
 
 .background-section {
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-attachment: fixed;
   padding: 50px;
   text-align: center;

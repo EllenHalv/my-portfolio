@@ -71,7 +71,7 @@ body {
   background-color: #000; }
 
 .background-section {
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-attachment: fixed;
   padding: 50px;

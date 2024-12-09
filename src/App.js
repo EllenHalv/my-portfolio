@@ -72,17 +72,19 @@ const CV = () => (
 function App() {
     return (
         <Router>
-            <HeaderComponent />
-            <main className="container mt-4">
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/projects" element={<Projects projects={projects} />} />
-                    <Route path="/cv" element={<CV />} />
-                    <Route path="/contact" element={<Contact />} />
-                </Routes>
-            </main>
+            <div className="bg-dark text-white" style={{minHeight: '100vh'}}>
+                <HeaderComponent/>
+                <main className="container mt-4">
+                    <Routes>
+                        <Route path="/" element={<Home/>}/>
+                        <Route path="/projects" element={<Projects projects={projects}/>}/>
+                        <Route path="/cv" element={<CV/>}/>
+                        <Route path="/contact" element={<Contact/>}/>
+                    </Routes>
+                </main>
+            </div>
         </Router>
-    );
+);
 }
 
 export default App;

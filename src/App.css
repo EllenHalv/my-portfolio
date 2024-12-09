@@ -67,11 +67,11 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #cccccc;
-  text-align: left;
+  text-align: center;
   background-color: #000; }
 
 .background-section {
-  background-image: url('/squirrel.jpg');
+  background-image: url('./squirrel.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

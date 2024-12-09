@@ -70,7 +70,7 @@ function App() {
   return (
       <Router>
         <div>
-          <header>
+          <header className="navbar">
             <h1>Ellen Halvardsson - Portfolio</h1>
               <nav>
                   <ul>

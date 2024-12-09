@@ -96,7 +96,6 @@ function App() {
                 <HeaderComponent/>
                 <main className="container mt-4">
                     <Routes>
-                        /*/my-portfolio should be the home page*/
                         <Route path="/my-portfolio" element={<App/>}/>
                         <Route path="/projects" element={<Projects projects={projects}/>}/>
                         <Route path="/cv" element={<CV/>}/>

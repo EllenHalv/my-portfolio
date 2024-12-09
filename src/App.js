@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faFileAlt, faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
-import HeaderComponent from './HeaderComponent';
+import HeaderComponent from './components/HeaderComponent';
 
 const projects = [
   {

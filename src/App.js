@@ -50,8 +50,8 @@ const Projects = () => (
                         </a>
                     </li>
                 </div>
-                    ))}
-                </ul>
+            ))}
+        </ul>
 
     </section>
 );
@@ -61,10 +61,10 @@ const Contact = () => (
         <h2>Contact <FontAwesomeIcon icon={faEnvelope}/></h2>
         <div className="glass">
 
-        <p>Feel free to contact me!</p>
-        <p>Email: <a href="mailto:ellenhalvardsson@gmail.com">ellenhalvardsson@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/ellen-halv/" target="_blank" rel="noopener noreferrer">Ellen
-            Halvardsson</a></p>
+            <p>Feel free to contact me!</p>
+            <p>Email: <a href="mailto:ellenhalvardsson@gmail.com">ellenhalvardsson@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/ellen-halv/" target="_blank" rel="noopener noreferrer">Ellen
+                Halvardsson</a></p>
         </div>
     </section>
 );
@@ -73,32 +73,41 @@ const CV = () => (
     <section>
         <h2>My Resume/CV <FontAwesomeIcon icon={faFileAlt}/></h2>
         <div className="glass">
-        <p>Here you can download my CV</p>
-        <p>Download my CV: <a href={`${process.env.PUBLIC_URL}/cv.pdf`} download>Click here</a></p>
+            <p>Here you can download my CV</p>
+            <p>Download my CV: <a href={`${process.env.PUBLIC_URL}/cv.pdf`} download>Click here</a></p>
         </div>
-        </section>
+    </section>
 );
 
 // Main Component
 function App() {
     return (
-
         <Router>
             <div className="bg-dark text-white" style={{minHeight: '100vh'}}>
-                <div className="background-section"
-                 style={{
-                     backgroundImage: `url(${squirrelImage})`,
-                 }}
+                {/* Background image */}
+                <div
+                    className="background-section"
+                    style={{
+                        backgroundImage: `url(${squirrelImage})`,
+                    }}
                 >
-                    <h1>Welcome to My Portfolio</h1>
-                    <p>Explore my projects and take a look at my resume!</p>
+                    <div className="background-content">
+                        <h1>Welcome to My Portfolio</h1>
+                        <p>Explore my projects below!</p>
+                    </div>
                 </div>
-                <HeaderComponent/>
+
+                {/* Header positioned below */}
+                <div className="header-section">
+                    <HeaderComponent />
+                </div>
+
+                {/* Main Content */}
                 <main className="container mt-4">
                     <Routes>
-                        <Route path="/projects" element={<Projects projects={projects}/>}/>
-                        <Route path="/cv" element={<CV/>}/>
-                        <Route path="/contact" element={<Contact/>}/>
+                        <Route path="/projects" element={<Projects projects={projects} />} />
+                        <Route path="/cv" element={<CV />} />
+                        <Route path="/contact" element={<Contact />} />
                     </Routes>
                 </main>
             </div>

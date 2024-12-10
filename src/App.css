@@ -71,12 +71,29 @@ body {
   background-color: #000; }
 
 .background-section {
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  padding: 50px;
-  text-align: center;
-  color: white;
+  position: relative; /* Positions the section for internal alignment */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center top; /* Centers the image at the top */
+  background-repeat: no-repeat; /* Prevents repeating */
+  width: 100vw; /* Full width of the viewport */
+  height: auto; /* Let the height adapt dynamically */
+  min-height: 40vh; /* Ensure it covers the viewport height at minimum */
+  display: flex; /* Enables centering of content */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+}
+
+.background-content {
+  text-align: center; /* Centers the text */
+  color: white; /* Makes the text readable on the background */
+  padding: 20px; /* Adds some spacing */
+}
+
+.header-section {
+  color: white; /* White text for contrast */
+  text-align: center; /* Centers header text */
+  width: 100%; /* Ensures the header spans the full width */
+  margin: 0; /* Eliminates extra spacing between the image and the header */
 }
 
 [tabindex="-1"]:focus {

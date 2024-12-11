@@ -2,7 +2,8 @@ import './App.css';
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faEnvelope, faFileAlt, faProjectDiagram} from '@fortawesome/free-solid-svg-icons';
+import {faEnvelope, faFileAlt, faProjectDiagram, } from '@fortawesome/free-solid-svg-icons';
+import { faJava, faReact, faBootstrap, faMicrosoft } from '@fortawesome/free-brands-svg-icons';
 import HeaderComponent from './components/HeaderComponent';
 import squirrelImage from './assets/images/squirrel.jpg';
 
@@ -10,26 +11,57 @@ const projects = [
     {
         name: 'Budget Tracker',
         description: 'Fullstack-project with Java och React. Using Oauth2 for authentication',
+        idea: 'This project was inspired by the need for better personal finance tools.',
+        usefulness: 'Helps users track their expenses and income effectively.',
+        technologies: [
+            { name: 'Java', icon: faJava },
+            { name: 'React', icon: faReact },
+        ],
         github: 'https://github.com/EllenHalv/budget-tracker',
+    },
+    {
+        name: 'Infrastructure Scanner',
+        description: 'A tool for scanning infrastructure assets and generating compliance reports.',
+        idea: 'Developed during my internship to automate asset reporting.',
+        usefulness: 'Helps organizations monitor compliance efficiently.',
+        technologies: [
+            { name: 'Java', icon: faJava },
+        ],
+        github: 'https://github.com/EllenHalv/infrastructure-scanner', // Endast om publik
     },
     {
         name: 'Borrow Buddy',
         description: 'Webbapp med .NET MVC',
+        idea: 'Inspired by reducing waste and sharing resources within communities.',
+        usefulness: 'Encourages sharing instead of buying new, fostering sustainability.',
+        technologies: [
+            { name: '.NET', icon: faMicrosoft },
+            { name: 'Bootstrap', icon: faBootstrap },
+        ],
         github: 'https://github.com/EllenHalv/.NET-mvc-webapp',
     },
     {
         name: 'Inventory App',
         description: 'AWS hosted CI/CD Java/React app',
+        idea: 'This project was inspired by the need for better personal finance tools.',
+        usefulness: 'Helps users track their expenses and income effectively.',
+        technologies: ['Java', 'React', 'OAuth2', 'Spring Boot'],
         github: 'https://github.com/EllenHalv/YarnCRUD-AWS-CICD',
     },
     {
         name: 'Recipe Generator',
         description: 'Python Third-party API integrated Recipe Generator',
+        idea: 'This project was inspired by the need for better personal finance tools.',
+        usefulness: 'Helps users track their expenses and income effectively.',
+        technologies: ['Java', 'React', 'OAuth2', 'Spring Boot'],
         github: 'https://github.com/EllenHalv/Recipe_Generator',
     },
     {
         name: 'Web Service with Spring Security',
         description: 'Java Web Service with Spring Security. Using JWT for authentication',
+        idea: 'This project was inspired by the need for better personal finance tools.',
+        usefulness: 'Helps users track their expenses and income effectively.',
+        technologies: ['Java', 'React', 'OAuth2', 'Spring Boot'],
         github: '    https://github.com/EllenHalv/Web-Service-with-Spring-Security',
     }
 ];
@@ -38,21 +70,30 @@ const projects = [
 const Projects = () => (
     <section>
         <h2>Projects <FontAwesomeIcon icon={faProjectDiagram}/></h2>
-
-        <ul>
+        <div className="projects-grid">
             {projects.map((project, index) => (
-                <div className="glass">
-                    <li key={index}>
-                        <h3>{project.name}</h3>
-                        <p>{project.description}</p>
-                        <a href={project.github} target="_blank" rel="noopener noreferrer">
-                            See more on GitHub
-                        </a>
-                    </li>
+                <div className="project-card glass" key={index}>
+                    <h3>{project.name}</h3>
+                    <p><strong>Description:</strong> {project.description}</p>
+                    <p><strong>Idea:</strong> {project.idea}</p>
+                    <p><strong>Usefulness:</strong> {project.usefulness}</p>
+                    <div className="technologies">
+                        <strong>Technologies:</strong>
+                        <ul>
+                            {project.technologies.map((tech, techIndex) => (
+                                <li key={techIndex} className="technology-item">
+                                    <FontAwesomeIcon icon={tech.icon}/> {/* Ikonen */}
+                                    <span>{tech.name}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                        See more on GitHub
+                    </a>
                 </div>
             ))}
-        </ul>
-
+        </div>
     </section>
 );
 

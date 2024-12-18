@@ -140,6 +140,26 @@ body {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
+.home-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.home-links a {
+  margin: 0 30px;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+}
+
+.home-links a:hover {
+  color: #6c757d;
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
 /*my added CSS*/
 
 [tabindex="-1"]:focus {

@@ -2,20 +2,28 @@ import './App.css';
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faEnvelope, faFileAlt, faProjectDiagram, } from '@fortawesome/free-solid-svg-icons';
-import { faJava, faReact, faBootstrap, faMicrosoft } from '@fortawesome/free-brands-svg-icons';
+import {faEnvelope, faProjectDiagram, faKey, faDatabase, faMessage, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faJava, faReact, faBootstrap, faMicrosoft, faPython, faDocker, faLinux, faHtml5, faCss } from '@fortawesome/free-brands-svg-icons';
 import HeaderComponent from './components/HeaderComponent';
 import squirrelImage from './assets/images/squirrel.jpg';
 
 const projects = [
     {
         name: 'Budget Tracker',
-        description: 'Fullstack-project with Java och React. Using Oauth2 for authentication',
-        idea: 'This project was inspired by the need for better personal finance tools.',
-        usefulness: 'Helps users track their expenses and income effectively.',
+        description: 'Budget Tracker is a full-stack application designed to help users manage their personal finances effectively. The application allows users to track their income and expenses, providing a clear overview of their financial status. Built with Java and React, it features a robust backend powered by Spring Boot and a user-friendly frontend developed with React.\n' +
+            '\n' +
+            'To ensure data security and streamline authentication, the application integrates OAuth2 for secure login, allowing users to sign in with their Google accounts. The application emphasizes simplicity and ease of use, making it suitable for anyone looking to take control of their financial habits.',
+        idea: 'This project was inspired by the need for better personal finance tools. The inspiration for the project came from the need for an efficient, modern, and accessible tool to manage personal budgets, making it easier for individuals to understand and optimize their spending.',
+        usefulness: 'Helps users track their expenses and income effectively.' +
+            '* Add, view, and manage income and expense records.\n' +
+            '* Real-time calculation of remaining budget and total expenses.\n' +
+            '* Secure authentication with OAuth2.',
         technologies: [
             { name: 'Java', icon: faJava },
             { name: 'React', icon: faReact },
+            { name: 'OAuth2', icon: faKey },
+            { name: 'HTML5', icon: faHtml5 },
+            { name: 'CSS', icon: faCss },
         ],
         github: 'https://github.com/EllenHalv/budget-tracker',
     },
@@ -26,6 +34,11 @@ const projects = [
         usefulness: 'Helps organizations monitor compliance efficiently.',
         technologies: [
             { name: 'Java', icon: faJava },
+            { name: 'Python', icon: faPython },
+            { name: 'Docker', icon: faDocker },
+            { name: 'Azure, Azure DevOps', icon: faMicrosoft },
+            { name: 'SQL', icon: faDatabase },
+            { name: 'Linux', icon: faLinux },
         ],
         github: 'https://github.com/EllenHalv/infrastructure-scanner', // Endast om publik
     },
@@ -37,6 +50,9 @@ const projects = [
         technologies: [
             { name: '.NET', icon: faMicrosoft },
             { name: 'Bootstrap', icon: faBootstrap },
+            { name: 'SignalR', icon: faMessage },
+            { name: 'HTML5', icon: faHtml5 },
+            { name: 'CSS', icon: faCss },
         ],
         github: 'https://github.com/EllenHalv/.NET-mvc-webapp',
     },
@@ -45,7 +61,13 @@ const projects = [
         description: 'AWS hosted CI/CD Java/React app',
         idea: 'This project was inspired by the need for better personal finance tools.',
         usefulness: 'Helps users track their expenses and income effectively.',
-        technologies: ['Java', 'React', 'OAuth2', 'Spring Boot'],
+        technologies: [
+            { name: 'Java', icon: faJava },
+            { name: 'React', icon: faReact },
+            { name: 'OAuth2', icon: faKey },
+            { name: 'HTML5', icon: faHtml5 },
+            { name: 'CSS', icon: faCss },
+        ],
         github: 'https://github.com/EllenHalv/YarnCRUD-AWS-CICD',
     },
     {
@@ -53,7 +75,11 @@ const projects = [
         description: 'Python Third-party API integrated Recipe Generator',
         idea: 'This project was inspired by the need for better personal finance tools.',
         usefulness: 'Helps users track their expenses and income effectively.',
-        technologies: ['Java', 'React', 'OAuth2', 'Spring Boot'],
+        technologies: [
+            { name: 'Java', icon: faJava },
+            { name: 'React', icon: faReact },
+            { name: 'OAuth2', icon: faKey },
+        ],
         github: 'https://github.com/EllenHalv/Recipe_Generator',
     },
     {
@@ -61,7 +87,11 @@ const projects = [
         description: 'Java Web Service with Spring Security. Using JWT for authentication',
         idea: 'This project was inspired by the need for better personal finance tools.',
         usefulness: 'Helps users track their expenses and income effectively.',
-        technologies: ['Java', 'React', 'OAuth2', 'Spring Boot'],
+        technologies: [
+            { name: 'Java', icon: faJava },
+            { name: 'React', icon: faReact },
+            { name: 'OAuth2', icon: faKey },
+        ],
         github: '    https://github.com/EllenHalv/Web-Service-with-Spring-Security',
     }
 ];
@@ -110,12 +140,24 @@ const Contact = () => (
     </section>
 );
 
-const CV = () => (
+const About = () => (
     <section>
-        <h2>My Resume/CV <FontAwesomeIcon icon={faFileAlt}/></h2>
+        <h2>About</h2>
         <div className="glass">
-            <p>Here you can download my CV</p>
             <p>Download my CV: <a href={`${process.env.PUBLIC_URL}/cv.pdf`} download>Click here</a></p>
+        </div>
+    </section>
+);
+
+const Home = () => (
+    <section>
+        <div className={"home-links"}>
+            <a href="/projects">
+                Explore my projects <FontAwesomeIcon icon={faArrowRight}/>
+            </a>
+            <a href="/about">
+                Learn more <FontAwesomeIcon icon={faArrowRight}/>
+            </a>
         </div>
     </section>
 );
@@ -134,21 +176,21 @@ function App() {
                 >
                     <div className="background-content">
                         <h1>Welcome to My Portfolio</h1>
-                        <p>Explore my projects below!</p>
                     </div>
                 </div>
 
                 {/* Header positioned below */}
                 <div className="header-section">
-                    <HeaderComponent />
+                    <HeaderComponent/>
                 </div>
 
                 {/* Main Content */}
                 <main className="container mt-4">
                     <Routes>
-                        <Route path="/projects" element={<Projects projects={projects} />} />
-                        <Route path="/cv" element={<CV />} />
-                        <Route path="/contact" element={<Contact />} />
+                        <Route path="/projects" element={<Projects projects={projects}/>}/>
+                        <Route path="/about" element={<About/>}/>
+                        <Route path="/contact" element={<Contact/>}/>
+                        <Route path="/my-portfolio" element={<Home/>}/>
                     </Routes>
                 </main>
             </div>

@@ -2,22 +2,20 @@ import './App.css';
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faEnvelope, faProjectDiagram, faKey, faDatabase, faMessage, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { faJava, faReact, faBootstrap, faMicrosoft, faPython, faDocker, faLinux, faHtml5, faCss } from '@fortawesome/free-brands-svg-icons';
+import {faEnvelope, faProjectDiagram, faKey, faDatabase, faMessage, faArrowRight, faInfinity, faNetworkWired } from '@fortawesome/free-solid-svg-icons';
+import { faJava, faReact, faBootstrap, faMicrosoft, faPython, faDocker, faLinux, faHtml5, faCss, faAws } from '@fortawesome/free-brands-svg-icons';
 import HeaderComponent from './components/HeaderComponent';
 import squirrelImage from './assets/images/squirrel.jpg';
 
 const projects = [
     {
         name: 'Budget Tracker',
-        description: 'Budget Tracker is a full-stack application designed to help users manage their personal finances effectively. The application allows users to track their income and expenses, providing a clear overview of their financial status. Built with Java and React, it features a robust backend powered by Spring Boot and a user-friendly frontend developed with React.\n' +
-            '\n' +
-            'To ensure data security and streamline authentication, the application integrates OAuth2 for secure login, allowing users to sign in with their Google accounts. The application emphasizes simplicity and ease of use, making it suitable for anyone looking to take control of their financial habits.',
-        idea: 'This project was inspired by the need for better personal finance tools. The inspiration for the project came from the need for an efficient, modern, and accessible tool to manage personal budgets, making it easier for individuals to understand and optimize their spending.',
-        usefulness: 'Helps users track their expenses and income effectively.' +
-            '* Add, view, and manage income and expense records.\n' +
-            '* Real-time calculation of remaining budget and total expenses.\n' +
-            '* Secure authentication with OAuth2.',
+        description: 'Budget Tracker is a full-stack application designed to help users manage their personal finances effectively.\n' +
+            'The application allows users to create budget goals and track their expenses, providing a clear overview of their financial status.\n' +
+            'Built with Java and React, it features a robust backend powered by Spring Boot and a user-friendly frontend developed with React.\n' +
+            'To ensure data security and streamline authentication, the application integrates OAuth2 for secure login.',
+        idea: 'This project was inspired by the need for better personal finance tools.',
+        usefulness: 'Helps users track their expenses and remaining budget. Acts as a central place for keeping track of spendings today and all spendings in the past',
         technologies: [
             { name: 'Java', icon: faJava },
             { name: 'React', icon: faReact },
@@ -29,9 +27,9 @@ const projects = [
     },
     {
         name: 'Infrastructure Scanner',
-        description: 'A tool for scanning infrastructure assets and generating compliance reports.',
-        idea: 'Developed during my internship to automate asset reporting.',
-        usefulness: 'Helps organizations monitor compliance efficiently.',
+        description: 'A tool for scanning system infrastructure and generating reports.',
+        idea: 'Developed during my internship for the purpose of being able to automate system scanning.',
+        usefulness: 'Helps organizations monitor devices efficiently. Through Grafana, users can easily view the status of their devices.',
         technologies: [
             { name: 'Java', icon: faJava },
             { name: 'Python', icon: faPython },
@@ -39,14 +37,16 @@ const projects = [
             { name: 'Azure, Azure DevOps', icon: faMicrosoft },
             { name: 'SQL', icon: faDatabase },
             { name: 'Linux', icon: faLinux },
+            { name: 'SNMP', icon: faNetworkWired },
         ],
-        github: 'https://github.com/EllenHalv/infrastructure-scanner', // Endast om publik
     },
     {
         name: 'Borrow Buddy',
-        description: 'Webbapp med .NET MVC',
-        idea: 'Inspired by reducing waste and sharing resources within communities.',
-        usefulness: 'Encourages sharing instead of buying new, fostering sustainability.',
+        description: 'Borrow Buddy is a web application developed using the ASP .NET MVC framework.',
+        idea: 'Inspired by the idea of having a platform for sharing resources within communities and reducing waste.',
+        usefulness: 'By allowing users to create listings, borrow items, and chat with other users, ' +
+            'Borrow Buddy simplifies the process of borrowing instead of buying, ' +
+            'reducing waste and encouraging a more sustainable lifestyle.',
         technologies: [
             { name: '.NET', icon: faMicrosoft },
             { name: 'Bootstrap', icon: faBootstrap },
@@ -57,42 +57,48 @@ const projects = [
         github: 'https://github.com/EllenHalv/.NET-mvc-webapp',
     },
     {
-        name: 'Inventory App',
-        description: 'AWS hosted CI/CD Java/React app',
-        idea: 'This project was inspired by the need for better personal finance tools.',
-        usefulness: 'Helps users track their expenses and income effectively.',
+        name: 'Inventory Application',
+        description: 'A web application built for keeping track of inventory. ' +
+            'The app is hosted on AWS, showcasing CI/CD implementation for streamlined updates and reliable deployment.',
+        idea: 'This project was inspired by the need for better personal inventory tracking of hobby materials.',
+        usefulness: 'By having a central place for tracking inventory, ' +
+            'users can easily see what they have in stock and have the ability to update the inventory when their stock changes.',
         technologies: [
             { name: 'Java', icon: faJava },
             { name: 'React', icon: faReact },
-            { name: 'OAuth2', icon: faKey },
             { name: 'HTML5', icon: faHtml5 },
             { name: 'CSS', icon: faCss },
+            { name: 'AWS', icon: faAws },
+            { name: 'CI/CD', icon: faInfinity },
         ],
         github: 'https://github.com/EllenHalv/YarnCRUD-AWS-CICD',
     },
     {
         name: 'Recipe Generator',
-        description: 'Python Third-party API integrated Recipe Generator',
-        idea: 'This project was inspired by the need for better personal finance tools.',
-        usefulness: 'Helps users track their expenses and income effectively.',
+        description: 'The Recipe Generator is a Python-based application designed to simplify meal planning. ' +
+            'It integrates with Spoonaculars API to fetch recipes. ' +
+            'The user can randomize a recipe, get multiple recipes based on ingredients or dietary restrictions.',
+        idea: 'The idea stemmed from the challenge of deciding what to cook with limited ingredients or specific dietary needs. ' +
+            'The Recipe Generator was created to inspire users with a variety of recipes tailored to their input.',
+        usefulness: 'This application is particularly helpful for people looking for new meal ideas or inspiration, ' +
+            'or those following specific diets, such as vegetarian or gluten-free.',
         technologies: [
-            { name: 'Java', icon: faJava },
-            { name: 'React', icon: faReact },
-            { name: 'OAuth2', icon: faKey },
+            { name: 'Python', icon: faPython },
         ],
         github: 'https://github.com/EllenHalv/Recipe_Generator',
     },
     {
         name: 'Web Service with Spring Security',
-        description: 'Java Web Service with Spring Security. Using JWT for authentication',
-        idea: 'This project was inspired by the need for better personal finance tools.',
-        usefulness: 'Helps users track their expenses and income effectively.',
+        description: 'This project is a Java-based web service that utilizes Spring Security to implement a robust authentication system. ' +
+            'The services API is secured by using JSON Web Tokens (JWT) for stateless authentication, ',
+        idea: 'JWT is a popular standard for managing authentication and authorization, ' +
+            'and this project was created with the purpose of gaining valuable insight into effective implementation within a Spring-based architecture.',
+        usefulness: 'Allows logged in users to access and contribute to resources stored in the server.',
         technologies: [
             { name: 'Java', icon: faJava },
-            { name: 'React', icon: faReact },
-            { name: 'OAuth2', icon: faKey },
+            { name: 'Spring Security', icon: faKey },
         ],
-        github: '    https://github.com/EllenHalv/Web-Service-with-Spring-Security',
+        github: 'https://github.com/EllenHalv/Web-Service-with-Spring-Security',
     }
 ];
 
@@ -118,9 +124,12 @@ const Projects = () => (
                             ))}
                         </ul>
                     </div>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    {/* Only display if project has a github link */}
+                    {project.github && (
+                        <a href={project.github} target="_blank" rel="noopener noreferrer">
                         See more on GitHub
-                    </a>
+                        </a>
+                    )}
                 </div>
             ))}
         </div>

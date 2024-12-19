@@ -111,7 +111,7 @@ const Projects = () => (
         <h2>Projects <FontAwesomeIcon icon={faProjectDiagram}/></h2>
         <div className="projects-grid">
             {projects.map((project, index) => (
-                <div className="project-card glass" key={index}>
+                <div className="project-card" key={index}>
                     <h3>{project.name}</h3>
                     <p><strong>Description:</strong> {project.description}</p>
                     <p><strong>Idea:</strong> {project.idea}</p>
@@ -142,7 +142,7 @@ const Projects = () => (
 const Contact = () => (
     <section>
         <h2>Contact <FontAwesomeIcon icon={faEnvelope}/></h2>
-        <div className="glass">
+        <div>
 
             <p>Connect with me!</p>
             <p>E-mail: <a href="mailto:ellenhalvardsson@gmail.com">ellenhalvardsson@gmail.com</a></p>
@@ -155,7 +155,7 @@ const Contact = () => (
 const About = () => (
     <section>
         <h2>About</h2>
-        <div className="glass">
+        <div>
             <p>Hi, I'm Ellen Halvardsson, a software developer with a passion for cloud technologies and full-stack
                 development.
                 I thrive on creativity and problem-solving, combining technical skills with innovative thinking to build
@@ -164,7 +164,7 @@ const About = () => (
                 always seeking new inspiration and opportunities for growth.</p>
         </div>
         <br/>
-        <div className="glass">
+        <div>
             <p>Download my CV <FontAwesomeIcon icon={faArrowRight}/> <a href={`${process.env.PUBLIC_URL}/cv.pdf`} download>Click here</a></p>
         </div>
     </section>

@@ -10,10 +10,9 @@ import squirrelImage from './assets/images/squirrel.jpg';
 const projects = [
     {
         name: 'Budget Tracker',
-        description: 'Budget Tracker is a full-stack application designed to help users manage their personal finances effectively.\n' +
-            'The application allows users to create budget goals and track their expenses, providing a clear overview of their financial status.\n' +
-            'Built with Java and React, it features a robust backend powered by Spring Boot and a user-friendly frontend developed with React.\n' +
-            'To ensure data security and streamline authentication, the application integrates OAuth2 for secure login.',
+        description: 'Budget Tracker is a full-stack application designed to help users manage their personal finances.\n' +
+            'The application allows users to create budget goals, track their expenses, and provides a clear overview of their budget status.\n' +
+            'Built with Java and React, as well as OAuth2 integration for secure login and streamline authentication.',
         idea: 'This project was inspired by the need for better personal finance tools.',
         usefulness: 'Helps users track their expenses and remaining budget. Acts as a central place for keeping track of spendings today and all spendings in the past',
         technologies: [
@@ -27,7 +26,8 @@ const projects = [
     },
     {
         name: 'Infrastructure Scanner',
-        description: 'A tool for scanning system infrastructure and generating reports.',
+        description: 'A tool for scanning system infrastructure and generating reports. ' +
+            'Using Java and Python, the application communicates with devices using SNMP to collect data that can be used to monitor its status and health.',
         idea: 'Developed during my internship for the purpose of being able to automate system scanning.',
         usefulness: 'Helps organizations monitor devices efficiently. Through Grafana, users can easily view the status of their devices.',
         technologies: [
@@ -42,7 +42,8 @@ const projects = [
     },
     {
         name: 'Borrow Buddy',
-        description: 'Borrow Buddy is a web application developed using the ASP .NET MVC framework.',
+        description: 'Borrow Buddy is a web application developed using the ASP .NET MVC framework. ' +
+            'It allows users to borrow and lend items within their community, encouraging a more sustainable way of utilizing our belongings. ',
         idea: 'Inspired by the idea of having a platform for sharing resources within communities and reducing waste.',
         usefulness: 'By allowing users to create listings, borrow items, and chat with other users, ' +
             'Borrow Buddy simplifies the process of borrowing instead of buying, ' +

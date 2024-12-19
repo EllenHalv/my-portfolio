@@ -8,22 +8,7 @@ import HeaderComponent from './components/HeaderComponent';
 import squirrelImage from './assets/images/squirrel.jpg';
 
 const projects = [
-    {
-        name: 'Budget Tracker',
-        description: 'Budget Tracker is a full-stack application designed to help users manage their personal finances.\n' +
-            'The application allows users to create budget goals, track their expenses, and provides a clear overview of their budget status.\n' +
-            'Built with Java and React, as well as OAuth2 integration for secure login and streamline authentication.',
-        idea: 'This project was inspired by the need for better personal finance tools.',
-        usefulness: 'Helps users track their expenses and remaining budget. Acts as a central place for keeping track of spendings today and all spendings in the past',
-        technologies: [
-            { name: 'Java', icon: faJava },
-            { name: 'React', icon: faReact },
-            { name: 'OAuth2', icon: faKey },
-            { name: 'HTML5', icon: faHtml5 },
-            { name: 'CSS', icon: faCss },
-        ],
-        github: 'https://github.com/EllenHalv/budget-tracker',
-    },
+
     {
         name: 'Infrastructure Scanner',
         description: 'A tool for scanning system infrastructure and generating reports. ' +
@@ -56,6 +41,22 @@ const projects = [
             { name: 'CSS', icon: faCss },
         ],
         github: 'https://github.com/EllenHalv/.NET-mvc-webapp',
+    },
+    {
+        name: 'Budget Tracker',
+        description: 'Budget Tracker is a full-stack application designed to help users manage their personal finances.\n' +
+            'The application allows users to create budget goals, track their expenses, and provides a clear overview of their budget status.\n' +
+            'Built with Java and React, as well as OAuth2 integration for secure login and streamline authentication.',
+        idea: 'This project was inspired by the need for better personal finance tools.',
+        usefulness: 'Helps users track their expenses and remaining budget. Acts as a central place for keeping track of spendings today and all spendings in the past',
+        technologies: [
+            { name: 'Java', icon: faJava },
+            { name: 'React', icon: faReact },
+            { name: 'OAuth2', icon: faKey },
+            { name: 'HTML5', icon: faHtml5 },
+            { name: 'CSS', icon: faCss },
+        ],
+        github: 'https://github.com/EllenHalv/budget-tracker',
     },
     {
         name: 'Inventory Application',
@@ -104,6 +105,7 @@ const projects = [
 ];
 
 // Pages
+
 const Projects = () => (
     <section>
         <h2>Projects <FontAwesomeIcon icon={faProjectDiagram}/></h2>
@@ -142,8 +144,8 @@ const Contact = () => (
         <h2>Contact <FontAwesomeIcon icon={faEnvelope}/></h2>
         <div className="glass">
 
-            <p>Feel free to contact me!</p>
-            <p>Email: <a href="mailto:ellenhalvardsson@gmail.com">ellenhalvardsson@gmail.com</a></p>
+            <p>Connect with me!</p>
+            <p>E-mail: <a href="mailto:ellenhalvardsson@gmail.com">ellenhalvardsson@gmail.com</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/ellen-halv/" target="_blank" rel="noopener noreferrer">Ellen
                 Halvardsson</a></p>
         </div>
@@ -154,15 +156,24 @@ const About = () => (
     <section>
         <h2>About</h2>
         <div className="glass">
-            <p>Download my CV: <a href={`${process.env.PUBLIC_URL}/cv.pdf`} download>Click here</a></p>
+            <p>Hi, I'm Ellen Halvardsson, a software developer with a passion for cloud technologies and full-stack
+                development.
+                I thrive on creativity and problem-solving, combining technical skills with innovative thinking to build
+                solutions that improve everyday life.
+                Beyond coding, I enjoy crafting and exploring ways to express myself through design and technology,
+                always seeking new inspiration and opportunities for growth.</p>
+        </div>
+        <br/>
+        <div className="glass">
+            <p>Download my CV <FontAwesomeIcon icon={faArrowRight}/> <a href={`${process.env.PUBLIC_URL}/cv.pdf`} download>Click here</a></p>
         </div>
     </section>
 );
 
 const Home = () => (
-    <section>
-        <div className={"home-links"}>
-            <a href="/projects">
+<section>
+    <div className={"home-links"}>
+        <a href="/projects">
                 Explore my projects <FontAwesomeIcon icon={faArrowRight}/>
             </a>
             <a href="/about">

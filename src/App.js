@@ -165,15 +165,18 @@ const About = () => (
         </div>
         <br/>
         <div>
-            <p>Download my CV <FontAwesomeIcon icon={faArrowRight}/> <a href="/cv.pdf" download>Click here</a></p>
+            {/*<p>Download my CV <FontAwesomeIcon icon={faArrowRight}/> <a href={`${process.env.PUBLIC_URL}/cv.pdf`} download>Click here</a></p>*/}
+            <p>Download my CV <FontAwesomeIcon icon={faArrowRight}/>
+                <a href="/cv.pdf" download>Click here</a>
+            </p>
         </div>
     </section>
 );
 
 const Home = () => (
-<section>
-    <div className={"home-links"}>
-        <a href="/projects">
+    <section>
+        <div className={"home-links"}>
+            <a href="/projects">
                 Explore my projects <FontAwesomeIcon icon={faArrowRight}/>
             </a>
             <a href="/about">

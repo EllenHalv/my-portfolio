@@ -6,7 +6,7 @@ const HeaderComponent = () => {
         <header className="main-header">
             <nav className="navbar navbar-expand-md navbar-dark bg-darkgrey">
                 <div className="container-fluid">
-                    <Link className="navbar-brand" to="/my-portfolio">Home</Link>
+                    <Link className="navbar-brand" to="/">Home</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                         <span className="navbar-toggler-icon"></span>
                     </button>

@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEnvelope, faProjectDiagram, faKey, faDatabase, faMessage, faArrowRight, faInfinity, faNetworkWired } from '@fortawesome/free-solid-svg-icons';
-import { faJava, faReact, faBootstrap, faMicrosoft, faPython, faDocker, faLinux, faHtml5, faCss, faAws } from '@fortawesome/free-brands-svg-icons';
+import { faJava, faReact, faBootstrap, faMicrosoft, faPython, faDocker, faLinux, faHtml5, faCss, faAws, faGithub, faYoutube, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import HeaderComponent from './components/HeaderComponent';
 import bannerImage from './assets/images/banner.png';
 
@@ -142,12 +142,15 @@ const Projects = () => (
 const Contact = () => (
     <section>
         <h2>Contact</h2>
-        <br/>
         <div>
-            <p>Connect with me!</p>
             <p>E-mail: <a href="mailto:ellenhalvardsson@gmail.com">ellenhalvardsson@gmail.com</a></p>
+            <br/><br/>
+            <h3>Social media</h3>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/ellen-halv/" target="_blank" rel="noopener noreferrer">Ellen
                 Halvardsson</a></p>
+            <p>GitHub: <a href="https://github.com/EllenHalv" target="_blank" rel="noopener noreferrer">@EllenHalv</a></p>
+            <p>YouTube: <a href="https://www.youtube.com/@TheOnlyExceptionYT" target="_blank" rel="noopener noreferrer">@TheOnlyException</a></p>
+
         </div>
     </section>
 );
@@ -200,6 +203,16 @@ function App() {
                         backgroundImage: `url(${bannerImage})`,
                     }}
                 >
+                    <div className="background-content">
+                        <div className="links">
+                        <a href="https://github.com/EllenHalv" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faGithub}/></a>
+                        <a href="https://www.linkedin.com/in/ellen-halv/" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faLinkedin}/></a>
+                        <a href="https://www.youtube.com/@TheOnlyExceptionYT" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faYoutube}/></a>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Header */}

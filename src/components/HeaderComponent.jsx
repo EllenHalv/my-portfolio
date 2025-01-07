@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const HeaderComponent = () => {
     return (
         <header className="main-header">
-            <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+            <nav className="navbar navbar-expand-md navbar-dark bg-darkgrey">
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/my-portfolio">Home</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">

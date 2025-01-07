@@ -1,11 +1,11 @@
 import './App.css';
-import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEnvelope, faProjectDiagram, faKey, faDatabase, faMessage, faArrowRight, faInfinity, faNetworkWired } from '@fortawesome/free-solid-svg-icons';
 import { faJava, faReact, faBootstrap, faMicrosoft, faPython, faDocker, faLinux, faHtml5, faCss, faAws } from '@fortawesome/free-brands-svg-icons';
 import HeaderComponent from './components/HeaderComponent';
-import squirrelImage from './assets/images/squirrel.jpg';
+import bannerImage from './assets/images/banner.png';
 
 const projects = [
 
@@ -160,8 +160,8 @@ const About = () => (
                 development.
                 I thrive on creativity and problem-solving, combining technical skills with innovative thinking to build
                 solutions that improve everyday life.
-                Beyond coding, I enjoy crafting and exploring ways to express myself through design and technology,
-                always seeking new inspiration and opportunities for growth.</p>
+                Beyond coding, I enjoy crafting and exploring ways to express myself through design and technology. I enjoy knitting, crocheting and digital design,
+                and I'm always seeking new inspiration and opportunities for growth.</p>
         </div>
         <br/>
         <div>
@@ -190,20 +190,17 @@ const Home = () => (
 function App() {
     return (
         <Router>
-            <div className="bg-dark text-white" style={{minHeight: '100vh'}}>
-                {/* Background image */}
+            <div className="bg-darkgrey text-white" style={{minHeight: '100vh'}}>
+                {/* Banner */}
                 <div
                     className="background-section"
                     style={{
-                        backgroundImage: `url(${squirrelImage})`,
+                        backgroundImage: `url(${bannerImage})`,
                     }}
                 >
-                    <div className="background-content">
-                        <h1>Welcome to My Portfolio</h1>
-                    </div>
                 </div>
 
-                {/* Header positioned below */}
+                {/* Header */}
                 <div className="header-section">
                     <HeaderComponent/>
                 </div>

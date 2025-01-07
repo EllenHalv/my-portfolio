@@ -167,7 +167,7 @@ const About = () => (
         <div>
             {/*<p>Download my CV <FontAwesomeIcon icon={faArrowRight}/> <a href={`${process.env.PUBLIC_URL}/cv.pdf`} download>Click here</a></p>*/}
             <p>Download my CV <FontAwesomeIcon icon={faArrowRight}/>
-                <a href="/cv.pdf" download="cv.pdf">Click here</a>
+                <a href="/cv.pdf" download="cv.pdf"> Click here </a>
             </p>
         </div>
     </section>

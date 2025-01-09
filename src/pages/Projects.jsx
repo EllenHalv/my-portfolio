@@ -1,11 +1,7 @@
-/*import './App.css';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEnvelope, faProjectDiagram, faKey, faDatabase, faMessage, faArrowRight, faInfinity, faNetworkWired } from '@fortawesome/free-solid-svg-icons';
 import { faJava, faReact, faBootstrap, faMicrosoft, faPython, faDocker, faLinux, faHtml5, faCss, faAws, faGithub, faYoutube, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import HeaderComponent from './components/HeaderComponent';
-import bannerImage from './assets/images/banner.png';
+
 
 const projects = [
 
@@ -106,7 +102,7 @@ const projects = [
 
 // Pages
 
-const Projects = () => (
+const ProjectsList = () => (
     <section>
         <h2>Projects <FontAwesomeIcon icon={faProjectDiagram}/></h2>
         <div className="projects-grid">
@@ -121,16 +117,16 @@ const Projects = () => (
                         <ul>
                             {project.technologies.map((tech, techIndex) => (
                                 <li key={techIndex} className="technology-item">
-                                    <FontAwesomeIcon icon={tech.icon}/> {/!* Ikonen *!/}
+                                    <FontAwesomeIcon icon={tech.icon}/> {/* Ikonen */}
                                     <span>{tech.name}</span>
                                 </li>
                             ))}
                         </ul>
                     </div>
-                    {/!* Only display if project has a github link *!/}
+                    {/* Only display if project has a github link */}
                     {project.github && (
                         <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        See more on GitHub
+                            See more on GitHub
                         </a>
                     )}
                 </div>
@@ -139,130 +135,4 @@ const Projects = () => (
     </section>
 );
 
-const Contact = () => (
-    <section>
-        <h2>Contact</h2>
-        <div>
-            <p><FontAwesomeIcon icon={faMessage}/> E-mail: <a href="mailto:ellenhalvardsson@gmail.com">ellenhalvardsson@gmail.com</a></p>
-            <br/><br/>
-            <h3>Social media</h3>
-            <p><FontAwesomeIcon icon={faLinkedin}/> LinkedIn: <a href="https://www.linkedin.com/in/ellen-halv/" target="_blank" rel="noopener noreferrer">Ellen
-                Halvardsson</a></p>
-            <p><FontAwesomeIcon icon={faGithub}/> GitHub: <a href="https://github.com/EllenHalv" target="_blank" rel="noopener noreferrer">@EllenHalv</a></p>
-            <p><FontAwesomeIcon icon={faYoutube}/>  YouTube:  <a href="https://www.youtube.com/@TheOnlyExceptionYT" target="_blank" rel="noopener noreferrer">@TheOnlyException</a></p>
-
-        </div>
-    </section>
-);
-
-const About = () => (
-    <section>
-        <h2>About</h2>
-        <br/>
-        <div>
-            <p>Hi, I'm Ellen Halvardsson, a software developer with a passion for cloud technologies and full-stack
-                development.
-                I thrive on creativity and problem-solving, combining technical skills with innovative thinking to build
-                solutions that improve everyday life.
-                Beyond coding, I enjoy crafting and exploring ways to express myself through design and technology. I
-                enjoy knitting, crocheting and digital design,
-                and I'm always seeking new inspiration and opportunities for growth.</p>
-        </div>
-        <br/><br/>
-        <div>
-            <p>Download my CV <FontAwesomeIcon icon={faArrowRight}/>
-                {' '}
-                <a href="/cv.pdf" download="cv.pdf">Click here</a>
-            </p>
-        </div>
-    </section>
-);
-
-const Home = () => (
-    <section>
-        <div className={"home-links"}>
-            <a href="/projects">
-                Explore my projects <FontAwesomeIcon icon={faArrowRight}/>
-            </a>
-            <a href="/about">
-                Learn more <FontAwesomeIcon icon={faArrowRight}/>
-            </a>
-        </div>
-    </section>
-);
-
-// Main Component
-function App() {
-    return (
-        <Router>
-            <div className="bg-darkgrey text-white" style={{minHeight: '100vh'}}>
-                {/!* Banner *!/}
-                <div
-                    className="background-section"
-                    style={{
-                        backgroundImage: `url(${bannerImage})`,
-                    }}
-                >
-                    <div className="background-content">
-                        <div className="links">
-                        <a href="https://github.com/EllenHalv" target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faGithub}/></a>
-                        <a href="https://www.linkedin.com/in/ellen-halv/" target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faLinkedin}/></a>
-                        <a href="https://www.youtube.com/@TheOnlyExceptionYT" target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faYoutube}/></a>
-                        </div>
-                    </div>
-                </div>
-
-                {/!* Header *!/}
-                <div className="header-section">
-                    <HeaderComponent/>
-                </div>
-
-                {/!* Main Content *!/}
-                <main className="container mt-4">
-                    <Routes>
-                        <Route path="/projects" element={<Projects projects={projects}/>}/>
-                        <Route path="/about" element={<About/>}/>
-                        <Route path="/contact" element={<Contact/>}/>
-                        <Route path="/" element={<Home/>}/>
-                    </Routes>
-                </main>
-            </div>
-        </Router>
-    );
-}*/
-
-//export default App;
-
-import Banner from './components/navbar/Banner.jsx';
-import './App.css';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import React from 'react';
-import Navbar from './components/navbar/Navbar';
-import Projects from './pages/Projects';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Home from './pages/Home';
-
-function App() {
-    return (
-        <Router>
-            <div className="bg-darkgrey text-white" style={{ minHeight: '100vh' }}>
-                <Banner />
-                <Navbar />
-                <main className="container mt-4">
-                    <Routes>
-                        <Route path="/projects" element={<Projects />} />
-                        <Route path="/about" element={<About />} />
-                        <Route path="/contact" element={<Contact />} />
-                        <Route path="/" element={<Home />} />
-                    </Routes>
-                </main>
-            </div>
-        </Router>
-    );
-}
-
-export default App;
+export default ProjectsList;

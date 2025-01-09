@@ -91,13 +91,13 @@ body {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.header-section {
+/*.header-section {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   color: white;
   text-align: center;
   width: 100%;
   margin: 0;
-}
+}*/
 
 .projects-grid {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;

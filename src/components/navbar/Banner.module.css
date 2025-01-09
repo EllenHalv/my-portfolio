@@ -1,0 +1,80 @@
+.App {
+    text-align: center;
+}
+
+/*! Themestr.app `Darkster` Bootstrap 4.3.1 theme */
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:200,300,400,700);
+/*! Import Bootstrap 4 variables */
+/*!
+ * Bootstrap v4.1.1 (https://getbootstrap.com/)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box; }
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+@-ms-viewport {
+    width: 100vw; }
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden; /* No scrollbar! */
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #cccccc;
+    text-align: center;
+}
+
+.background-section {
+    position: relative;
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: auto;
+    min-height: 40vh; /* Ensure it covers the viewport height at minimum */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-content {
+    position: relative;
+    color: white;
+}
+
+.links {
+    margin-top: 225px;
+    display: flex;
+    gap: 100px;
+}
+
+.links a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.background-content a:hover {
+    color: #6c757d;
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}

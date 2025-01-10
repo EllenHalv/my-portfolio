@@ -68,101 +68,6 @@ body {
   align-items: center;
 }
 
-@media (max-width: 768px) {
-  .background-section {
-    background-size: 250%;
-  }
-
-  .background-content {
-    margin-top: 0;
-  }
-
-  .background-content .links {
-    gap: 95px;
-  }
-
-  .background-content .links a {
-    font-size: 2rem;
-  }
-
-  .main-header {
-    margin-top: -175px;
-  }
-
-  .navbar {
-    margin-top: 220px;
-  }
-
-  /* hidden sliding md menu */
-  .navbar-nav {
-    display: flex;
-    position: fixed;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 120px;
-    align-items: center;
-    left: -100%;
-    top: 40%;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #000000;
-    z-index: 10;
-    transition: left 1s;
-  }
-
-  .navbar-toggler {
-    display: block;
-    position: absolute;
-    right: 1rem;
-    top: 0;
-    font-size: 1.5rem;
-    cursor: pointer;
-    z-index: 100;
-    color: white;
-  }
-
-  /* when active, sliding md menu */
-  .navbar-nav.active {
-    left: 0;
-  }
-
-  .nav-item {
-    margin: 20px 0; /* Add spacing between menu items */
-  }
-
-  .nav-item .nav-link {
-    color: #fff; /* White text for links */
-    font-size: 2rem; /* Larger font for mobile */
-    text-decoration: none;
-    padding: 25px;
-  }
-
-  .nav-link:hover {
-    color: #6c757d; /* Slightly lighter on hover */
-  }
-
-  /* Ensure the Home link stays in place */
-  .navbar-brand {
-    position: absolute;
-    left: 1rem;
-    font-size: 1.5rem;
-    color: #fff;
-    text-decoration: none;
-    /*margin-top: 100px;*/
-  }
-
-  .navbar ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-  }
-}
-
 .background-content {
   position: relative;
   color: white;
@@ -189,7 +94,7 @@ body {
 .projects-grid {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
   gap: 90px;
   margin-top: 100px;
 }
@@ -310,5 +215,175 @@ nav ul li a:hover {
   color: #6c757d; }
 
 
+
+@media (max-width: 768px) {
+  /*.background-section {
+    background-size: 250%;
+  }*/
+
+  .background-content {
+    margin-top: 0;
+  }
+
+  .background-content .links {
+    gap: 95px;
+    margin-top: 80%;
+  }
+
+  .background-content .links a {
+    font-size: 2rem;
+  }
+
+  .home-links a {
+    margin: 60px 30px;
+
+  }
+
+  .main-header {
+    margin-top: -210px;
+  }
+
+  .navbar {
+    margin-top: 220px;
+  }
+
+  /* hidden sliding md menu */
+  .navbar-nav {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 120px;
+    align-items: center;
+    left: -100%;
+    top: 40%;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    z-index: 10;
+    transition: left 1s;
+  }
+
+  .navbar-toggler {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 100;
+    color: white;
+  }
+
+  /* when active, sliding md menu */
+  .navbar-nav.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 20px 0; /* Add spacing between menu items */
+  }
+
+  .nav-item .nav-link {
+    color: #fff; /* White text for links */
+    font-size: 2rem; /* Larger font for mobile */
+    text-decoration: none;
+    padding: 25px;
+  }
+
+  .nav-link:hover {
+    color: #6c757d; /* Slightly lighter on hover */
+  }
+
+  /* Ensure the Home link stays in place */
+  .navbar-brand {
+    position: absolute;
+    left: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    /*margin-top: 100px;*/
+  }
+
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .background-section {
+    background-size: 250%;
+  }
+
+  .background-content .links {
+    gap: 95px;
+    margin-top: 55%;
+  }
+
+  .background-content .links a {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .background-section {
+    background-size: 250%;
+  }
+
+  .background-content .links {
+    gap: 95px;
+    margin-top: 20%;
+  }
+
+  .background-content .links a {
+    font-size: 2rem;
+  }
+
+  .home-links {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+  }
+
+  .home-links a {
+    margin: 0 30px;
+    font-size: 1rem;
+  }
+
+  .main-header {
+    margin-top: -360px;
+  }
+
+  .navbar {
+    margin-top: 290px;
+  }
+
+  /* hidden sliding md menu */
+  .navbar-nav {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 120px;
+    align-items: center;
+    left: -100%;
+    top: 25%;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    z-index: 10;
+    transition: left 1s;
+  }
+}
 
 

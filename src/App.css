@@ -69,11 +69,6 @@ body {
 }
 
 @media (max-width: 768px) {
-
-  @-ms-viewport {
-    width: 100vw;
-  }
-
   .background-section {
     background-size: 250%;
   }

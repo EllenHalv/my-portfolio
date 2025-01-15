@@ -55,17 +55,33 @@ body {
   background-color: #000000;
 }
 
-.background-section {
+/*.background-section {
   position: relative;
-  background-size: cover; /* Ensures the image covers the entire section */
+  background-size: cover; !* Ensures the image covers the entire section *!
   background-position: center top;
   background-repeat: no-repeat;
   width: 100vw;
-  height: auto;
+  !* REMOVED *!
+  !*height: auto;*!
+  min-height: 35vh; !* Ensure it covers the viewport height at minimum *!
+  display: flex;
+  justify-content: center;
+  align-items: center;
+!* NEW *!
+  flex-direction: column;
+}*/
+
+.background-section {
+  position: relative;
+  background-size: cover; /* Ensures the image covers the section */
+  background-position: center top; /* Centers the background image */
+  background-repeat: no-repeat;
+  width: 100vw; /* Full width */
   min-height: 40vh; /* Ensure it covers the viewport height at minimum */
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .background-content {
@@ -74,9 +90,16 @@ body {
 }
 
 .links {
-  margin-top: 80%;
+  /* REMOVED */
+  /*margin-top: 80%;*/
   display: flex;
-  gap: 100px;
+  /*NEW*/
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 190px;
+  /**/
+  /*gap: 100px;*/
+  gap: clamp(20px, 18vw, 100px);
 }
 
 .links a {
@@ -155,12 +178,15 @@ body {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 150px;
+  gap: 100px
 }
 
 .home-links a {
-  margin: 50px 50px;
-  font-size: 1.2rem;
+  /*margin: 50px 100px;*/
+  margin: clamp(0px, 0vw, 100px);
+  /*NEW*/
+  font-size: clamp(20px, 2.5vw, 30px);
   color: white;
   text-decoration: none;
 }
@@ -172,28 +198,37 @@ body {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
+/*NEW*/
+.main-header {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .navbar {
   background-color: #000000;
   margin-left: 30px;
 }
 
+.navbar-toggler {
+  display: none;
+}
+
 .navbar ul {
   list-style: none;
   display: flex;
-  justify-content: flex-start;
   margin: 0;
-  padding: 0;
+  gap: clamp(30px, 5vw, 40px);
+  padding-left: 20px;
 }
 
 .nav-item {
-  display: flex;
-  margin: 0 10px; /* Add spacing between menu items */
   font-size: 1rem;
 }
 
 /* Animation for menu */
 nav ul li a {
   transition: background-color 0.3s, transform 0.3s;
+  font-size: clamp(15px, 1.5vw, 18px); /* Adjust font size dynamically */
 }
 
 nav ul li a:hover {
@@ -202,48 +237,52 @@ nav ul li a:hover {
 
 /* MY ADDED CSS */
 
-.nav-link {
-  display: block;
-  padding: 0.5rem 1rem;
-}
-
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
 }
 
 .nav-link.disabled {
-  color: #6c757d; }
+  color: #6c757d;
+}
 
-
+.navbar .navbar-brand {
+  font-size: clamp(19px, 2.5vw, 22px);
+}
 
 @media (max-width: 768px) {
-  .background-section {
-    background-size: 250%;
-  }
+  /*.background-section {
+    background-size: clamp(220%, 70vw, 270%); !* Gradually zooms out more *!
+  }*/
 
-  .background-content {
-    margin-top: 0;
+  .projects-grid {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    gap: 90px;
+    margin-top: 100px;
   }
+}
 
-  .background-content .links {
-    gap: 95px;
-    margin-top: 65%;
-  }
-
-  .background-content .links a {
-    font-size: 1.8rem;
+@media (max-width: 575px) {
+  .home-links {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*margin-top: 120px;*/
+    gap: 80px;
   }
 
   .home-links a {
-    margin: 60px 30px;
+    margin: 0 30px;
+    /*font-size: 1.3rem;*/
   }
 
+  /*NEW*/
   .main-header {
-    margin-top: -210px;
-  }
-
-  .navbar {
-    margin-top: 200px;
+    display: flex;
+    /*justify-content: flex-end;*/
   }
 
   /* hidden sliding md menu */
@@ -252,10 +291,11 @@ nav ul li a:hover {
     position: fixed;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 120px;
+    padding-top: 90px;
     align-items: center;
     left: -100%;
-    top: 35%;
+    /*top: 40%;*/
+    top: 300px;
     bottom: 0;
     right: 0;
     width: 100%;
@@ -267,9 +307,9 @@ nav ul li a:hover {
 
   .navbar-toggler {
     display: block;
-    position: absolute;
+    position: fixed;
     right: 1rem;
-    top: 0;
+    /*top: 15px;*/
     font-size: 1.5rem;
     cursor: pointer;
     z-index: 100;
@@ -287,117 +327,28 @@ nav ul li a:hover {
 
   .nav-item .nav-link {
     color: #fff; /* White text for links */
-    font-size: 2rem; /* Larger font for mobile */
+    font-size: 1.5rem; /* Larger font for mobile */
     text-decoration: none;
-    padding: 25px;
+    padding: 10px;
   }
 
   .nav-link:hover {
     color: #6c757d; /* Slightly lighter on hover */
   }
 
-  /* Ensure the Home link stays in place */
-  .navbar-brand {
-    position: absolute;
-    left: 0;
-    font-size: 1.5rem;
-    color: #fff;
-    text-decoration: none;
-    /*margin-top: 100px;*/
-  }
-
-  .navbar ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-  }
-
-  .projects-grid {
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
-    gap: 90px;
-    margin-top: 100px;
-  }
-}
-
-@media (max-width: 575px) {
-  .background-section {
-    background-size: 250%;
-  }
-
-  .background-content .links {
-    gap: 95px;
-    margin-top: 35%;
-  }
-
-  .background-content .links a {
-    font-size: 2rem;
-  }
-
-  .home-links {
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 120px;
-    gap: 80px;
-  }
-
-  .home-links a {
-    margin: 0 30px;
-    font-size: 1.3rem;
-  }
-
-  /* hidden sliding md menu */
-  .navbar-nav {
-    display: flex;
-    position: fixed;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 120px;
-    align-items: center;
-    left: -100%;
-    top: 35%;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #000000;
-    z-index: 10;
-    transition: left 1s;
-  }
-
-  .main-header {
-    margin-top: -350px;
-  }
-
-  .navbar {
-    margin-top: 310px;
-  }
-
-  .navbar .navbar-brand {
-    font-size: 1.2rem;
-    left: 0;
-  }
+   .navbar ul {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     margin: 0;
+     padding: 0;
+   }
 }
 
 @media (max-width: 480px) {
   .background-section {
-    background-size: 250%;
-  }
-
-  .background-content .links {
-    gap: 95px;
-    margin-top: 20%;
-  }
-
-  .background-content .links a {
-    font-size: 2rem;
+    min-height: clamp(10vh, 5vw, 20vh);
   }
 
   .home-links {
@@ -406,21 +357,26 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 120px;
+    /*margin-top: 120px;*/
     gap: 80px;
   }
 
   .home-links a {
     margin: 0 30px;
-    font-size: 1.3rem;
+    /*font-size: 1.3rem;*/
   }
 
-  .main-header {
-    margin-top: -360px;
-  }
-
-  .navbar {
-    margin-top: 290px;
+  .background-content .links {
+    /* REMOVED */
+    /*margin-top: 80%;*/
+    display: flex;
+    /*NEW*/
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 150px;
+    margin-bottom: 20px;
+    /**/
+    /*gap: 100px;*/
   }
 
   /* hidden sliding md menu */
@@ -429,10 +385,11 @@ nav ul li a:hover {
     position: fixed;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 120px;
+    padding-top: 90px;
     align-items: center;
     left: -100%;
-    top: 30%;
+    /*top: 40%;*/
+    top: 220px;
     bottom: 0;
     right: 0;
     width: 100%;
@@ -440,11 +397,6 @@ nav ul li a:hover {
     background-color: #000000;
     z-index: 10;
     transition: left 1s;
-  }
-
-  .navbar .navbar-brand {
-    font-size: 1.2rem;
-    left: 0;
   }
 }
 

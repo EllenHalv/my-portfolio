@@ -52,7 +52,7 @@ const Navbar = () => {
 
     return (
         <header className="main-header">
-            <nav className="navbar navbar-expand-md navbar-dark bg-darkgrey">
+            <nav className="navbar navbar-dark bg-darkgrey">
                 {/*<div className="container-fluid">*/}
                     {/* Home Link */}
                     <Link className="navbar-brand" to="/">Home</Link>

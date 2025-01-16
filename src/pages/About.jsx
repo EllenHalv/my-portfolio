@@ -20,7 +20,7 @@ const About = () => (
         <div>
             <p>Download my CV <FontAwesomeIcon icon={faArrowRight}/>
                 {' '}
-                <a href="/cv.pdf" download="cv.pdf">Click here</a>
+                <a href="/Ellen-Halvardsson-CV.pdf" download="Ellen-Halvardsson-CV.pdf">Click here</a>
             </p>
         </div>
     </section>

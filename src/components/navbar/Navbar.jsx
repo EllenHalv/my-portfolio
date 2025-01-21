@@ -84,6 +84,11 @@ const Navbar = () => {
                                     Contact
                                 </Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/game" onClick={closeNav}>
+                                    Play a game!
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 {/*</div>*/}

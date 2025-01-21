@@ -25,7 +25,7 @@ const projects = [
         name: 'Borrow Buddy',
         description: 'Borrow Buddy is a web application developed using the ASP .NET MVC framework. ' +
             'It allows users to borrow and lend items within their community, encouraging a more sustainable way of utilizing our belongings. ',
-        idea: 'Inspired by the idea of having a platform for sharing resources within communities and reducing waste.',
+        idea: 'Inspired by the idea of having a platform for sharing resources within communities and reducing waste and over-consumption.',
         usefulness: 'By allowing users to create listings, borrow items, and chat with other users, ' +
             'Borrow Buddy simplifies the process of borrowing instead of buying, ' +
             'reducing waste and encouraging a more sustainable lifestyle.',
@@ -44,7 +44,7 @@ const projects = [
             'The application allows users to create budget goals, track their expenses, and provides a clear overview of their budget status.\n' +
             'Built with Java and React, as well as OAuth2 integration for secure login and streamline authentication.',
         idea: 'This project was inspired by the need for better personal finance tools.',
-        usefulness: 'Helps users track their expenses and remaining budget. Acts as a central place for keeping track of spendings today and all spendings in the past',
+        usefulness: 'Helps users track their expenses and remaining budget. Acts as a central place for keeping track of spendings today and all spendings in the past.',
         technologies: [
             { name: 'Java', icon: faJava },
             { name: 'React', icon: faReact },
@@ -58,7 +58,7 @@ const projects = [
         name: 'Inventory Application',
         description: 'A web application built for keeping track of inventory. ' +
             'The app is hosted on AWS, showcasing CI/CD implementation for streamlined updates and reliable deployment.',
-        idea: 'This project was inspired by the need for better personal inventory tracking of hobby materials.',
+        idea: 'This project was inspired by the need for better personal inventory tracking of hobby materials. As a knitter and crocheter, I have a lot of yarn. If you know, you know...',
         usefulness: 'By having a central place for tracking inventory, ' +
             'users can easily see what they have in stock and have the ability to update the inventory when their stock changes.',
         technologies: [

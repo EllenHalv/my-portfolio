@@ -23,6 +23,7 @@ const About = () => (
                 <a href="/Ellen-Halvardsson-CV.pdf" download="Ellen-Halvardsson-CV.pdf">Click here</a>
             </p>
         </div>
+        <br/><br/>
     </section>
 );
 

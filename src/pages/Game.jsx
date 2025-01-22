@@ -2,6 +2,7 @@ import './game.css'
 import { useState, useEffect } from 'react'
 import SingleCard from '../components/game/SingleCard'
 
+/*
 const cardImages = [
     { "src": "../images/frontman.png", matched: false },
     { "src": "../images/circle.png", matched: false },
@@ -10,28 +11,31 @@ const cardImages = [
     { "src": "../images/triangle.png", matched: false },
     { "src": "../images/umbrella.png", matched: false },
 ]
+*/
 
-/*const cardImages = [
+const cardImages = [
     { "src": "../images/fox.png", matched: false },
     { "src": "../images/racoon.png", matched: false },
     { "src": "../images/bear.png", matched: false },
     { "src": "../images/elephant.png", matched: false },
     { "src": "../images/rocket.png", matched: false },
     { "src": "../images/planet.png", matched: false },
-]*/
+]
 
 const Game = () => {
     const [cards, setCards] = useState([])
     const [turns, setTurns] = useState(0)
     const [choiceOne, setChoiceOne] = useState(null)
     const [choiceTwo, setChoiceTwo] = useState(null)
+    const [disabled, setDisabled] = useState(false)
 
     // shuffle cards
     const shuffleCards = () => {
         const shuffledCards = [...cardImages, ...cardImages]
             .sort(() => Math.random() - 0.5)
             .map((card) => ({ ...card, id: Math.random() }))
-
+        setChoiceOne(null)
+        setChoiceTwo(null)
         setCards(shuffledCards)
         setTurns(0)
     }
@@ -44,6 +48,7 @@ const Game = () => {
     // compare two selected cards
     useEffect(() => {
         if (choiceOne && choiceTwo) {
+            setDisabled(true)
             if (choiceOne.src === choiceTwo.src) {
                 setCards(prevCards => {
                     return prevCards.map(card => {
@@ -61,14 +66,18 @@ const Game = () => {
         }
     }, [choiceOne, choiceTwo]);
 
-    // console.log(cards)
-
     // reset choices & increase turn
     const resetTurn = () => {
         setChoiceOne(null)
         setChoiceTwo(null)
         setTurns(prevTurns => prevTurns + 1)
+        setDisabled(false)
     }
+
+    //start a new game automagically
+    useEffect(() => {
+        shuffleCards()
+    }, [])
 
     return (
         <div className="Game">
@@ -83,10 +92,12 @@ const Game = () => {
                             card={card}
                             handleChoice={handleChoice}
                             flipped={card === choiceOne || card === choiceTwo || card.matched}
+                            disabled={disabled}
                         />
                     ))}
                 </div>
             </div>
+            <p>Turns: {turns}</p>
         </div>
     )
 }

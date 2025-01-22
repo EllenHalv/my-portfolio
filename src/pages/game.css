@@ -41,8 +41,8 @@ html, body {
     padding: 20px;
     border: none;
     max-width: 900px; /* Optional: Restrict the width */
-    margin-top: 50px;
-    margin-bottom: 25px;
+    margin-top: 20px;
+    margin-bottom: 15px;
 }
 
 .card-grid {

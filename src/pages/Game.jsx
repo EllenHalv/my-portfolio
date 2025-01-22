@@ -11,6 +11,15 @@ const cardImages = [
     { "src": "../images/umbrella.png", matched: false },
 ]
 
+/*const cardImages = [
+    { "src": "../images/fox.png", matched: false },
+    { "src": "../images/racoon.png", matched: false },
+    { "src": "../images/bear.png", matched: false },
+    { "src": "../images/elephant.png", matched: false },
+    { "src": "../images/rocket.png", matched: false },
+    { "src": "../images/planet.png", matched: false },
+]*/
+
 const Game = () => {
     const [cards, setCards] = useState([])
     const [turns, setTurns] = useState(0)
@@ -63,18 +72,20 @@ const Game = () => {
 
     return (
         <div className="Game">
-            <h1>Magic Match</h1>
+            <h1>Squid Game Memory</h1>
             <button onClick={shuffleCards}>New Game</button>
 
-            <div className="card-grid">
-                {cards.map(card => (
-                    <SingleCard
-                        key={card.id}
-                        card={card}
-                        handleChoice={handleChoice}
-                        flipped={card === choiceOne || card === choiceTwo || card.matched}
-                    />
-                ))}
+            <div className="card-container">
+                <div className="card-grid">
+                    {cards.map(card => (
+                        <SingleCard
+                            key={card.id}
+                            card={card}
+                            handleChoice={handleChoice}
+                            flipped={card === choiceOne || card === choiceTwo || card.matched}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     )

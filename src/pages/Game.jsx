@@ -2,7 +2,6 @@ import './game.css'
 import { useState, useEffect } from 'react'
 import SingleCard from '../components/game/SingleCard'
 
-/*
 const cardImages = [
     { "src": "../images/frontman.png", matched: false },
     { "src": "../images/circle.png", matched: false },
@@ -11,8 +10,8 @@ const cardImages = [
     { "src": "../images/triangle.png", matched: false },
     { "src": "../images/umbrella.png", matched: false },
 ]
-*/
 
+/*
 const cardImages = [
     { "src": "../images/fox.png", matched: false },
     { "src": "../images/racoon.png", matched: false },
@@ -21,6 +20,7 @@ const cardImages = [
     { "src": "../images/rocket.png", matched: false },
     { "src": "../images/planet.png", matched: false },
 ]
+*/
 
 const Game = () => {
     const [cards, setCards] = useState([])
@@ -81,7 +81,8 @@ const Game = () => {
 
     return (
         <div className="Game">
-            <h1>Space Friends Memory</h1>
+            {/*<h1>Space Friends Memory</h1>*/}
+            <h1>Squid Game Memory</h1>
             <button onClick={shuffleCards}>New Game</button>
 
             <div className="card-container">

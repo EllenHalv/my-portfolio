@@ -81,7 +81,7 @@ const Game = () => {
 
     return (
         <div className="Game">
-            <h1>Squid Game Memory</h1>
+            <h1>Space Friends Memory</h1>
             <button onClick={shuffleCards}>New Game</button>
 
             <div className="card-container">

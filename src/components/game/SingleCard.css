@@ -1,6 +1,6 @@
 .card {
     position: relative;
-    border: none;
+    border: none !important;
 }
 
 .card div {
@@ -12,6 +12,7 @@
     display: block;
     border: 2px solid #000000;
     border-radius: 6px;
+    /*border: none;*/
 }
 
 /* front of card - the picture */

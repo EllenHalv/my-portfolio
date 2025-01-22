@@ -12,13 +12,13 @@ html, body {
     align-items: center;
 }
 
-h1 {
+.Game h1 {
     margin-top: 80px;
     text-align: center;
     margin-bottom: 60px;
 }
 
-button {
+.Game button {
     background: none;
     border: 2px solid #fff;
     padding: 6px 12px;
@@ -30,10 +30,10 @@ button {
     width: 150px;
 }
 
-button:hover {
+/*button:hover {
     background: #c23866;
     color: #fff;
-}
+}*/
 
 .card-container {
     background-color: #000000; /* Dark background for contrast */

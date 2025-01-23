@@ -1,4 +1,4 @@
-import Banner from './components/navbar/Banner.jsx';
+// import Banner from './components/navbar/Banner.jsx';
 import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import React from 'react';
@@ -13,7 +13,7 @@ function App() {
     return (
         <Router>
             <div className="bg-darkgrey text-white" style={{ minHeight: '100vh' }}>
-                <Banner />
+                {/*<Banner />*/}
                 <Navbar />
                 <main className="container mt-4">
                     <Routes>

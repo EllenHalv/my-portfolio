@@ -53,7 +53,8 @@ body {
 
 .bg-darkgrey {
   /*background-color: #000000;*/
-  background-color: #191919;
+  /*background-color: #191919;*/
+    background-color: #1c1c1c;
 }
 
 /*.background-section {
@@ -119,6 +120,7 @@ body {
   margin-bottom: 50px;
   justify-content: space-between; /* Push the link to the bottom */
   position: relative;
+  z-index: 1;
 }
 
 .project-card h3 {

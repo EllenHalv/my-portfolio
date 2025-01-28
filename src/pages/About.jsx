@@ -2,9 +2,11 @@ import React from "react";
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEnvelope, faProjectDiagram, faKey, faDatabase, faMessage, faArrowRight, faInfinity, faNetworkWired } from '@fortawesome/free-solid-svg-icons';
+import styles from './About.module.css';
+
 
 const About = () => (
-    <section>
+    <section className={styles.About}>
         <h2>About</h2>
         <br/>
         <div>
@@ -16,14 +18,14 @@ const About = () => (
                 enjoy knitting, crocheting and digital design,
                 and I'm always seeking new inspiration and opportunities for growth.</p>
         </div>
-        <br/><br/>
         <div>
             <p>Download my CV <FontAwesomeIcon icon={faArrowRight}/>
                 {' '}
                 <a href="/Ellen-Halvardsson-CV.pdf" download="Ellen-Halvardsson-CV.pdf">Click here</a>
             </p>
         </div>
-        <br/><br/>
+        <div className={styles.topBlur}/>
+        <div className={styles.bottomBlur}/>
     </section>
 );
 

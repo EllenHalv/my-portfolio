@@ -10,7 +10,7 @@ const Home = () => (
             <h1 className={styles.title}>Hi there, I'm Ellen</h1>
             <p className={styles.description}>I'm a developer with a passion for learning and creating. I have experience with a variety of technologies and languages. Explore my projects and learn more about my passions!</p>
 
-            <div className="home-links">
+            <div className={styles.homeLinks}>
                 <a href="/projects">
                     Explore my projects <FontAwesomeIcon icon={faArrowRight}/>
                 </a>

@@ -104,20 +104,20 @@ const projects = [
 // Pages
 
 const ProjectsList = () => (
-    <section>
+    <section className={styles.Projects}>
         <h2>Projects <FontAwesomeIcon icon={faProjectDiagram}/></h2>
-        <div className="projects-grid">
+        <div className={styles.projectsGrid}>
             {projects.map((project, index) => (
-                <div className="project-card" key={index}>
+                <div className={styles.projectCard} key={index}>
                     <h3>{project.name}</h3>
                     <p><strong>Description:</strong> {project.description}</p>
                     <p><strong>Idea:</strong> {project.idea}</p>
                     <p><strong>Usefulness:</strong> {project.usefulness}</p>
-                    <div className="technologies">
+                    <div className={styles.technologies}>
                         <strong>Technologies:</strong>
                         <ul>
                             {project.technologies.map((tech, techIndex) => (
-                                <li key={techIndex} className="technology-item">
+                                <li key={techIndex}>
                                     <FontAwesomeIcon icon={tech.icon}/> {/* Ikonen */}
                                     <span>{tech.name}</span>
                                 </li>

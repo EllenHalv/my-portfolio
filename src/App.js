@@ -13,12 +13,14 @@ import Footer from './components/footer/Footer';
 function App() {
     return (
         <Router>
-            {/*<div className="bg-darkgrey text-white" style={{ minHeight: '100vh' }}>*/}
+            <div className="bg-darkgrey text-white" style={{ minHeight: '100vh' }}>
                 {/*<Banner />*/}
-            <div className={"bg-darkgrey text-white"}>
+            {/*<div className={"bg-darkgrey text-white"}>*/}
+            {/*<div className={"background"}>*/}
                 <Navbar />
                 {/*<main className="container mt-4">*/}
-                <main>
+                <main className="background">
+                {/*<main>*/}
                     <Routes>
                         <Route path="/projects" element={<Projects />} />
                         <Route path="/about" element={<About />} />

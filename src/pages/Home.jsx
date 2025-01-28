@@ -7,21 +7,10 @@ import styles from "./Home.module.css";
 const Home = () => (
     <section className={styles.container}>
         <div className={styles.content}>
-            <h1 className={styles.title}>Hi, I'm Ellen</h1>
+            <h1 className={styles.title}>Hi there, I'm Ellen</h1>
             <p className={styles.description}>I'm a developer with a passion for learning and creating. I have experience with a variety of technologies and languages. Explore my projects and learn more about my passions!</p>
 
-            <div className="background-content">
-                <div className="links">
-                    <a href="https://github.com/EllenHalv" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faGithub}/></a>
-                    <a href="https://www.linkedin.com/in/ellen-halv/" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faLinkedin}/></a>
-                    <a href="https://www.youtube.com/@TheOnlyExceptionYT" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faYoutube}/></a>
-                </div>
-            </div>
-
-            <div className={"home-links"}>
+            <div className="home-links">
                 <a href="/projects">
                     Explore my projects <FontAwesomeIcon icon={faArrowRight}/>
                 </a>
@@ -32,7 +21,7 @@ const Home = () => (
         </div>
         <img
             className={styles.homeImg}
-            src="../images/icon.svg"
+            src="../images/icon.png"
             alt="Image of me"
         />
         <div className={styles.topBlur}/>

@@ -8,14 +8,17 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Game from './pages/Game';
+import Footer from './components/footer/Footer';
 
 function App() {
     return (
         <Router>
-            <div className="bg-darkgrey text-white" style={{ minHeight: '100vh' }}>
+            {/*<div className="bg-darkgrey text-white" style={{ minHeight: '100vh' }}>*/}
                 {/*<Banner />*/}
+            <div className={"bg-darkgrey text-white"}>
                 <Navbar />
-                <main className="container mt-4">
+                {/*<main className="container mt-4">*/}
+                <main>
                     <Routes>
                         <Route path="/projects" element={<Projects />} />
                         <Route path="/about" element={<About />} />
@@ -24,6 +27,7 @@ function App() {
                         <Route path="/game" element={<Game />} />
                     </Routes>
                 </main>
+                <Footer />
             </div>
         </Router>
     );

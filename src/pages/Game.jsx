@@ -82,23 +82,35 @@ const Game = () => {
     return (
         <div className={styles.Game}>
             {/*<h1>Space Friends Memory</h1>*/}
-            <h1>Squid Game Memory</h1>
-            <button onClick={shuffleCards}>New Game</button>
-
-            <div className={styles.gameContainer}>
-                <div className={styles.cardGrid}>
-                    {cards.map(card => (
-                        <SingleCard
-                            key={card.id}
-                            card={card}
-                            handleChoice={handleChoice}
-                            flipped={card === choiceOne || card === choiceTwo || card.matched}
-                            disabled={disabled}
-                        />
-                    ))}
-                </div>
+            <div className={styles.fadeInText}>
+                <h1>Squid Game Memory</h1>
             </div>
-            <p className={styles.turns}>Turns: {turns}</p>
+            <div className={styles.fadeInText}>
+                <button onClick={shuffleCards}>New Game</button>
+
+            </div>
+
+                <div className={styles.gameContainer}>
+                    <div className={styles.cardGrid}>
+                        {cards.map(card => (
+                            // <div className={styles.fadeInText}>
+                                <SingleCard
+                                    key={card.id}
+                                    card={card}
+                                    handleChoice={handleChoice}
+                                    flipped={card === choiceOne || card === choiceTwo || card.matched}
+                                    disabled={disabled}
+                                />
+                            // </div>
+                        ))}
+                    </div>
+                </div>
+            <div className={styles.fadeInText}>
+                <p className={styles.turns}>Turns: {turns}</p>
+
+            </div>
+
+
             <div className={styles.topBlur}/>
             <div className={styles.bottomBlur}/>
         </div>

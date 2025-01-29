@@ -9,7 +9,7 @@ html, body {
     flex-direction: column;
     margin-left: 5vw;
     margin-right: 5vw;
-    min-height: 89.5vh;
+    min-height: 100vh;
 }
 
 .About h2 {
@@ -19,6 +19,25 @@ html, body {
 
 .container {
     display: table-column;
+}
+
+.fadeInText {
+    animation: fadeIn 1.5s;
+    width: 100%;
+
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        margin-left: -5%;
+        /*width: 300%;*/
+    }
+    100% {
+        opacity: 1;
+        margin-left: 0;
+        /*width: 60%;*/
+    }
 }
 
 .topBlur {

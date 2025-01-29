@@ -105,31 +105,37 @@ const projects = [
 
 const ProjectsList = () => (
     <section className={styles.Projects}>
-        <h2>Projects <FontAwesomeIcon icon={faProjectDiagram}/></h2>
+        <div className={styles.fadeInText}>
+            <h2>Projects <FontAwesomeIcon icon={faProjectDiagram}/></h2>
+        </div>
         <div className={styles.projectsGrid}>
             {projects.map((project, index) => (
-                <div className={styles.projectCard} key={index}>
-                    <h3>{project.name}</h3>
-                    <p><strong>Description:</strong> {project.description}</p>
-                    <p><strong>Idea:</strong> {project.idea}</p>
-                    <p><strong>Usefulness:</strong> {project.usefulness}</p>
-                    <div className={styles.technologies}>
-                        <strong>Technologies:</strong>
-                        <ul>
-                            {project.technologies.map((tech, techIndex) => (
-                                <li key={techIndex}>
-                                    <FontAwesomeIcon icon={tech.icon}/> {/* Ikonen */}
-                                    <span>{tech.name}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                // Each project card
+                <div className={styles.fadeInText}>
+                    <div className={styles.projectCard} key={index}>
+                        <h3>{project.name}</h3>
+                        <p><strong>Description:</strong> {project.description}</p>
+                        <p><strong>Idea:</strong> {project.idea}</p>
+                        <p><strong>Usefulness:</strong> {project.usefulness}</p>
+                        <div className={styles.technologies}>
+                            <strong>Technologies:</strong>
+                            <ul>
+                                {project.technologies.map((tech, techIndex) => (
+                                    <li key={techIndex}>
+                                        <FontAwesomeIcon icon={tech.icon}/> {/* Ikonen */}
+                                        <span>{tech.name}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
                     {/* Only display if project has a github link */}
                     {project.github && (
                         <a href={project.github} target="_blank" rel="noopener noreferrer">
                             See more on GitHub
                         </a>
                     )}
+                    </div>
                 </div>
             ))}
         </div>

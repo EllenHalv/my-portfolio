@@ -1,10 +1,10 @@
 // import React from 'react';
-import { React, useState } from 'react';
+import { React, useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEnvelope, faProjectDiagram, faKey, faDatabase, faMessage, faArrowRight, faInfinity, faNetworkWired, faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import styles from './../../App.css';
-import './Navbar.module.css'; // Import custom CSS for styling
+// import './Navbar.module.css'; // Import custom CSS for styling
 
 /*const Navbar = () => {
     const [nav, setNav] = useState(false);
@@ -45,6 +45,14 @@ const Navbar = () => {
     const toggleNav = () => {
         setNav(!nav);
     };
+
+    useEffect(() => {
+        if (nav) {
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+        }
+    }, [nav]);
 
     const closeNav = () => {
         setNav(false);

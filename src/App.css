@@ -42,6 +42,8 @@ section h2 {
 body {
   margin: 0;
   overflow-x: hidden; /* No scrollbar! */
+  /*overflow: hidden;*/
+
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -49,155 +51,13 @@ body {
   text-align: center;
 }
 
-/* MY ADDED CSS */
-
 .bg-darkgrey {
-  background-color: #000000;
-}
-
-/*.background-section {
-  position: relative;
-  background-size: cover; !* Ensures the image covers the entire section *!
-  background-position: center top;
-  background-repeat: no-repeat;
-  width: 100vw;
-  !* REMOVED *!
-  !*height: auto;*!
-  min-height: 35vh; !* Ensure it covers the viewport height at minimum *!
-  display: flex;
-  justify-content: center;
-  align-items: center;
-!* NEW *!
-  flex-direction: column;
-}*/
-
-.background-section {
-  position: relative;
-  background-size: cover; /* Ensures the image covers the section */
-  background-position: center top; /* Centers the background image */
-  background-repeat: no-repeat;
-  width: 100vw; /* Full width */
-  min-height: 40vh; /* Ensure it covers the viewport height at minimum */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.background-content {
-  position: relative;
-  color: white;
-}
-
-.links {
-  /* REMOVED */
-  /*margin-top: 80%;*/
-  display: flex;
-  /*NEW*/
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 190px;
-  /**/
-  /*gap: 100px;*/
-  gap: clamp(20px, 18vw, 100px);
-}
-
-.links a {
-  color: white;
-  font-size: 1.5rem;
-}
-
-.background-content a:hover {
-  color: #6c757d;
-  transform: translateY(-5px);
-  transition: transform 0.3s ease;
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-.projects-grid {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
-  gap: 90px;
-  margin-top: 100px;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.project-card {
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgb(21, 21, 21);
-  text-align: left;
-  margin-bottom: 50px;
-  justify-content: space-between; /* Push the link to the bottom */
-  position: relative;
-}
-
-.project-card h3 {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  margin-top: 10px;
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-.technologies {
-  margin-top: 35px;
-  margin-bottom: 65px;
-}
-
-.project-card .technologies ul {
-  list-style: none;
-  margin-top: 10px;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.project-card .technologies ul li {
-  margin-right: 10px;
-  margin-bottom: 5px;
-  padding: 5px 10px;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  font-size: 1.0rem;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  transition: transform 1s ease;
-  box-shadow: 0 5px 12px 4px rgb(138, 44, 251);
-}
-
-.project-card a {
-  text-decoration: none;
-  position: absolute; /* Anchors the link to the bottom-left */
-  bottom: 30px;
-  left: 25px;
-}
-
-.home-links {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  display: flex;
-  justify-content: center;
-  margin-top: 150px;
-  gap: 100px
-}
-
-.home-links a {
-  /*margin: 50px 100px;*/
-  margin: clamp(0px, 0vw, 100px);
-  /*NEW*/
-  font-size: clamp(20px, 2.5vw, 30px);
-  color: white;
-  text-decoration: none;
-}
-
-.home-links a:hover {
-  color: #6c757d;
-  transform: translateY(-5px);
-  transition: transform 0.3s ease;
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  /*background-color: #000000;*/
+  /*background-color: #191919;*/
+    background-color: #111822;
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*height: 100%;*/
 }
 
 /*NEW*/
@@ -207,8 +67,13 @@ body {
 }
 
 .navbar {
-  background-color: #000000;
-  margin-left: 30px;
+  background-color: #121822;
+    margin-left: 45px;
+}
+
+/* Add this CSS to disable scrolling */
+.no-scroll {
+  overflow: hidden;
 }
 
 .navbar-toggler {
@@ -224,13 +89,17 @@ body {
 }
 
 .nav-item {
-  font-size: 1rem;
+  /*font-size: 1rem;*/
+  font-size: clamp(1rem, 5vw, 1.2rem);
+  /*font-size: clamp(15px, 1.5vw, 18px);*/
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /* Animation for menu */
 nav ul li a {
   transition: background-color 0.3s, transform 0.3s;
-  font-size: clamp(15px, 1.5vw, 18px); /* Adjust font size dynamically */
+  /*font-size: clamp(15px, 1.5vw, 18px); !* Adjust font size dynamically *!*/
 }
 
 nav ul li a:hover {
@@ -249,17 +118,7 @@ nav ul li a:hover {
 
 .navbar .navbar-brand {
   font-size: clamp(19px, 2.5vw, 22px);
-}
-
-@media (max-width: 768px) {
-  .projects-grid {
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 90px;
-    margin-top: 100px;
-    width: 100%;
-  }
+  margin-right:30px;
 }
 
 @media (max-width: 575px) {
@@ -271,10 +130,11 @@ nav ul li a:hover {
     flex-direction: column;
     /*margin-top: 120px;*/
     gap: 80px;
+    margin-top: 70px;
   }
 
   .home-links a {
-    margin: 0 30px;
+    margin: 0 50px;
     /*font-size: 1.3rem;*/
   }
 
@@ -289,17 +149,15 @@ nav ul li a:hover {
     display: flex;
     position: fixed;
     flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 90px;
+    justify-content: center;
     align-items: center;
     left: -100%;
-    /*top: 40%;*/
-    top: 300px;
     bottom: 0;
     right: 0;
-    width: 100%;
+    top: 0;
+    width: 100vw;
     height: 100vh;
-    background-color: #000000;
+    background-color: #151515;
     z-index: 10;
     transition: left 1s;
   }
@@ -313,8 +171,9 @@ nav ul li a:hover {
   .navbar-toggler {
     display: block;
     position: absolute; /* Aligns relative to the .navbar */
-    top: 50%; /* Center vertically within the navbar */
-    transform: translateY(-50%); /* Corrects centering offset */
+    /*top: 50%; !* Center vertically within the navbar *!*/
+    /*top: -35vh;*/
+    /*transform: translateY(-50%); !* Corrects centering offset *!*/
     right: 1rem; /* Stays to the right of the navbar */
     font-size: 1.5rem;
     cursor: pointer;
@@ -329,7 +188,7 @@ nav ul li a:hover {
   }
 
   .nav-item {
-    margin: 10px 0; /* Add spacing between menu items */
+    margin: 3vw;
   }
 
   .nav-item .nav-link {
@@ -354,9 +213,9 @@ nav ul li a:hover {
 }
 
 @media (max-width: 480px) {
-  .background-section {
+  /*.background-section {
     min-height: clamp(10vh, 5vw, 20vh);
-  }
+  }*/
 
   .home-links {
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -385,26 +244,4 @@ nav ul li a:hover {
     /**/
     /*gap: 100px;*/
   }
-
-  /* hidden sliding md menu */
-  .navbar-nav {
-    display: flex;
-    position: fixed;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 90px;
-    align-items: center;
-    left: -100%;
-    /*top: 40%;*/
-    top: 220px;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #000000;
-    z-index: 10;
-    transition: left 1s;
-  }
 }
-
-

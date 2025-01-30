@@ -1,6 +1,6 @@
-import './game.css'
 import { useState, useEffect } from 'react'
 import SingleCard from '../components/game/SingleCard'
+import styles from './Game.module.css';
 
 const cardImages = [
     { "src": "../images/frontman.png", matched: false },
@@ -80,25 +80,39 @@ const Game = () => {
     }, [])
 
     return (
-        <div className="Game">
+        <div className={styles.Game}>
             {/*<h1>Space Friends Memory</h1>*/}
-            <h1>Squid Game Memory</h1>
-            <button onClick={shuffleCards}>New Game</button>
-
-            <div className="card-container">
-                <div className="card-grid">
-                    {cards.map(card => (
-                        <SingleCard
-                            key={card.id}
-                            card={card}
-                            handleChoice={handleChoice}
-                            flipped={card === choiceOne || card === choiceTwo || card.matched}
-                            disabled={disabled}
-                        />
-                    ))}
-                </div>
+            <div className={styles.fadeInText}>
+                <h1>Squid Game Memory</h1>
             </div>
-            <p>Turns: {turns}</p>
+            <div className={styles.fadeInText}>
+                <button className={styles.newGameButton} onClick={shuffleCards}>New Game</button>
+
+            </div>
+
+                <div className={styles.gameContainer}>
+                    <div className={styles.cardGrid}>
+                        {cards.map(card => (
+                            // <div className={styles.fadeInText}>
+                                <SingleCard
+                                    key={card.id}
+                                    card={card}
+                                    handleChoice={handleChoice}
+                                    flipped={card === choiceOne || card === choiceTwo || card.matched}
+                                    disabled={disabled}
+                                />
+                            // </div>
+                        ))}
+                    </div>
+                </div>
+            <div className={styles.fadeInText}>
+                <p className={styles.turns}>Turns: {turns}</p>
+
+            </div>
+
+
+            <div className={styles.topBlur}/>
+            <div className={styles.bottomBlur}/>
         </div>
     )
 }

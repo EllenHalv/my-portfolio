@@ -4,14 +4,16 @@
 }
 
 .card div {
-    background-color: #000000;
+    background-color: rgb(18, 24, 34);
+    /*border: deeppink;*/
+    /*border-radius: 6px;*/
 }
 
 .card img {
     width: 100%;
     display: block;
     border: 2px solid #000000;
-    border-radius: 6px;
+    border-radius: 20px;
     /*border: none;*/
 }
 
@@ -35,4 +37,19 @@
 .flipped .back {
     transform: rotateY(90deg);
     transition-delay: 0s;
+}
+
+.fadeInText {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 1;
+        transform: scale(105%);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(100%);
+    }
 }

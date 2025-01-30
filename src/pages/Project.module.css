@@ -1,0 +1,185 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.Projects {
+    /*max-width: 860px;*/
+    /*margin: 40px auto;*/
+    display: grid;
+    flex-direction: column;
+    /*align-items: center;*/
+    /*align-content: center;*/
+    justify-content: center;
+    padding-bottom: 130px;
+    min-height: 100vh;
+}
+
+.Projects h2 {
+    margin-top: 80px;
+    margin-bottom: 60px;
+    margin-left: 1.5vw;
+}
+
+.highlight {
+    color: rgb(74, 163, 253);
+}
+
+/*.Projects .projectsGrid {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    display: grid;
+    grid-template-columns: clamp(225px, 92vw, 755px);
+    !*grid-template-columns: clamp(225px, 92vw, 755px);*!
+    gap: 60px;
+    margin-top: 100px;
+    !*width: 100%;*!
+    max-width: 92vw;
+}*/
+
+.Projects .projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns by default */
+    gap: 60px;
+    margin-top: 60px;
+    max-width: 92vw;
+    z-index: 1;
+}
+
+.projectCard {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgb(0, 0, 0);
+    background-color: #121822;
+    text-align: left;
+    margin-bottom: 50px;
+    justify-content: space-between; /* Push the link to the bottom */
+    position: relative;
+    z-index: 1;
+    /*width: 600px;*/
+}
+
+.projectCard h3 {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.technologies {
+    margin-top: 35px;
+    margin-bottom: 45px;
+}
+
+.projectCard .technologies ul {
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.projectCard .technologies ul li {
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    font-size: 1.0rem;
+}
+
+.projectCard:hover {
+    transform: translateY(-5px);
+    transition: transform 1s ease;
+    box-shadow: 0 5px 12px 4px rgb(0, 0, 0);
+}
+
+/*.projectCard a {
+    text-decoration: none;
+    position: absolute; !* Anchors the link to the bottom-left *!
+    bottom: 30px;
+    left: 25px;
+}*/
+
+.ProjectLinkList {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.ProjectLinkButton {
+    border: 2px solid rgb(179, 222, 226);
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-right: 20px;
+    background-color: rgb(74, 163, 253);
+    color: #000000;
+    cursor: pointer;
+    box-shadow: 3px 3px 15px;
+}
+
+.ProjectLinkButton a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    /*margin-right: 10px;*/
+}
+
+.ProjectLinkButton:hover {
+    color: #000000;
+    transform: scale(105%);
+    transition: transform 0.3s ease;
+}
+
+.fadeInText {
+    animation: fadeIn 1.5s;
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 1;
+        margin-left: -5%;
+        /*width: 300%;*/
+    }
+    100% {
+        opacity: 1;
+        margin-left: 0;
+        /*width: 60%;*/
+    }
+}
+
+.topBlur {
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    max-width: 350px;
+    min-width: 350px;
+    top: 200px;
+    left: -10vw;
+    border-radius: 764px;
+    background: rgba(25, 55, 109, 0.7);
+    filter: blur(100px);
+    z-index: 0;
+}
+
+.bottomBlur {
+    position: absolute;
+    width: 70vw;
+    height: 70vw;
+    max-width: 150px;
+    min-width: 50px;
+    top: 546px;
+    right: 5vw;
+    border-radius: 764px;
+    background: rgba(25, 55, 109, 0.7);
+    filter: blur(100px);
+    z-index: 0;
+}
+
+@media (max-width: 1000px) {
+
+    .Projects .projectsGrid {
+        grid-template-columns: 1fr; /* Single column for narrower screens */
+    }
+}

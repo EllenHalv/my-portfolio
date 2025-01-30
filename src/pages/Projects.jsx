@@ -1,7 +1,8 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEnvelope, faProjectDiagram, faKey, faDatabase, faMessage, faArrowRight, faInfinity, faNetworkWired } from '@fortawesome/free-solid-svg-icons';
 import { faJava, faReact, faBootstrap, faMicrosoft, faPython, faDocker, faLinux, faHtml5, faCss, faAws, faGithub, faYoutube, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-
+import React from "react";
+import styles from "./Project.module.css";
 
 const projects = [
 
@@ -36,7 +37,7 @@ const projects = [
             { name: 'HTML5', icon: faHtml5 },
             { name: 'CSS', icon: faCss },
         ],
-        github: 'https://github.com/EllenHalv/.NET-mvc-webapp',
+        demo: 'https://www.youtube.com/watch?v=l7inz-vErP8https://www.youtube.com/watch?v=l7inz-vErP8'
     },
     {
         name: 'Budget Tracker',
@@ -103,35 +104,56 @@ const projects = [
 // Pages
 
 const ProjectsList = () => (
-    <section>
-        <h2>Projects <FontAwesomeIcon icon={faProjectDiagram}/></h2>
-        <div className="projects-grid">
+    <section className={styles.Projects}>
+        <div className={styles.fadeInText}>
+            <h2>My Recent <span className={styles.highlight}>Projects </span>{/*<FontAwesomeIcon icon={faProjectDiagram}/>*/}</h2>
+        </div>
+        <div className={styles.projectsGrid}>
             {projects.map((project, index) => (
-                <div className="project-card" key={index}>
-                    <h3>{project.name}</h3>
-                    <p><strong>Description:</strong> {project.description}</p>
-                    <p><strong>Idea:</strong> {project.idea}</p>
-                    <p><strong>Usefulness:</strong> {project.usefulness}</p>
-                    <div className="technologies">
-                        <strong>Technologies:</strong>
-                        <ul>
-                            {project.technologies.map((tech, techIndex) => (
-                                <li key={techIndex} className="technology-item">
-                                    <FontAwesomeIcon icon={tech.icon}/> {/* Ikonen */}
-                                    <span>{tech.name}</span>
+                // Each project card
+                <div className={styles.fadeInText}>
+                    <div className={styles.projectCard} key={index}>
+                        <h3>{project.name}</h3>
+                        <p><strong>Description:</strong> {project.description}</p>
+                        <p><strong>Idea:</strong> {project.idea}</p>
+                        <p><strong>Usefulness:</strong> {project.usefulness}</p>
+                        <div className={styles.technologies}>
+                            <strong>Technologies:</strong>
+                            <ul>
+                                {project.technologies.map((tech, techIndex) => (
+                                    <li key={techIndex}>
+                                        <FontAwesomeIcon icon={tech.icon}/> {/* Ikonen */}
+                                        <span>{tech.name}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                    <ol className={styles.ProjectLinkList}>
+                            {/* Only display if project has a github link */}
+                            {project.github && (
+                                <li className={styles.ProjectLinkButton}>
+                                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                                        GitHub
+                                    </a>
                                 </li>
-                            ))}
-                        </ul>
+                            )}
+                            {/* Only display if project has a demo link */}
+                            {project.demo && (
+                                <li className={styles.ProjectLinkButton}>
+                                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                                        See demo
+                                    </a>
+                                </li>
+                            )}
+                    </ol>
+
                     </div>
-                    {/* Only display if project has a github link */}
-                    {project.github && (
-                        <a href={project.github} target="_blank" rel="noopener noreferrer">
-                            See more on GitHub
-                        </a>
-                    )}
                 </div>
             ))}
         </div>
+        <div className={styles.topBlur}/>
+        <div className={styles.bottomBlur}/>
     </section>
 );
 

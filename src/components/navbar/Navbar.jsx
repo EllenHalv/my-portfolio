@@ -61,7 +61,6 @@ const Navbar = () => {
     return (
         <header className="main-header">
             <nav className="navbar navbar-dark bg-darkgrey">
-                {/*<div className="container-fluid">*/}
                     {/* Home Link */}
                     <Link className="navbar-brand" to="/">Home</Link>
 
@@ -77,6 +76,14 @@ const Navbar = () => {
                     {/* Sliding Menu */}
                     <div className={nav ? "navbar-nav active" : "navbar-nav"}>
                         <ul>
+                                {/* only display if the navbar-nav is active */}
+                            {nav && (
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/" onClick={closeNav}>
+                                        Home
+                                    </Link>
+                                </li>
+                            )}
                             <li className="nav-item">
                                 <Link className="nav-link" to="/projects" onClick={closeNav}>
                                     Projects
@@ -87,11 +94,6 @@ const Navbar = () => {
                                     About
                                 </Link>
                             </li>
-                            {/*<li className="nav-item">*/}
-                            {/*    <Link className="nav-link" to="/contact" onClick={closeNav}>*/}
-                            {/*        Contact*/}
-                            {/*    </Link>*/}
-                            {/*</li>*/}
                             <li className="nav-item">
                                 <Link className="nav-link" to="/game" onClick={closeNav}>
                                     Play a Game!
@@ -99,7 +101,6 @@ const Navbar = () => {
                             </li>
                         </ul>
                     </div>
-                {/*</div>*/}
             </nav>
         </header>
     );

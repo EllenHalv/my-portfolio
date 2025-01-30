@@ -90,7 +90,8 @@ body {
 
 .nav-item {
   /*font-size: 1rem;*/
-  font-size: clamp(15px, 1.5vw, 19px);
+  font-size: clamp(1rem, 5vw, 1.2rem);
+  /*font-size: clamp(15px, 1.5vw, 18px);*/
   margin-left: 10px;
   margin-right: 10px;
 }

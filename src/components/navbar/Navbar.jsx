@@ -87,11 +87,11 @@ const Navbar = () => {
                                     About
                                 </Link>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/contact" onClick={closeNav}>
-                                    Contact
-                                </Link>
-                            </li>
+                            {/*<li className="nav-item">*/}
+                            {/*    <Link className="nav-link" to="/contact" onClick={closeNav}>*/}
+                            {/*        Contact*/}
+                            {/*    </Link>*/}
+                            {/*</li>*/}
                             <li className="nav-item">
                                 <Link className="nav-link" to="/game" onClick={closeNav}>
                                     Play a Game!

@@ -21,6 +21,14 @@ html, body {
     display: table-column;
 }
 
+.container div a {
+    color: rgb(74, 163, 253);
+}
+
+.highlight {
+    color: rgb(74, 163, 253);
+}
+
 .fadeInText {
     animation: fadeIn 1.5s;
 

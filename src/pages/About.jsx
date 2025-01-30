@@ -8,10 +8,10 @@ import styles from './About.module.css';
 const About = () => (
     <section className={styles.About}>
         <div className={styles.fadeInText}>
-            <h2>About</h2>
+            <h2>Learn More <span className={styles.highlight}> About Me</span></h2>
             <br/>
             <div>
-                <p>Hi, I'm Ellen Halvardsson, a software developer with a passion for cloud technologies and full-stack
+                <p className={styles.description}>Hi, I'm Ellen Halvardsson, a software developer with a passion for cloud technologies and full-stack
                     development.
                     I thrive on creativity and problem-solving, combining technical skills with innovative thinking to build
                     solutions that improve everyday life.
@@ -20,9 +20,10 @@ const About = () => (
                     and I'm always seeking new inspiration and opportunities for growth.</p>
             </div>
             <div>
-                <p>Download my CV <FontAwesomeIcon icon={faArrowRight}/>
+                <p>View my Resume <FontAwesomeIcon icon={faArrowRight}/>
                     {' '}
-                    <a href="/Ellen-Halvardsson-CV.pdf" download="Ellen-Halvardsson-CV.pdf">Click here</a>
+                    <button className={styles.ResumeLinkButton} onClick={() => window.open("/Ellen-Halvardsson-CV.pdf", "_blank")}>Click here</button>
+                    {/*<a href="/Ellen-Halvardsson-CV.pdf" download="Ellen-Halvardsson-CV.pdf">Click here</a>*/}
                 </p>
             </div>
         </div>

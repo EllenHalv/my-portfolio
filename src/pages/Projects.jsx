@@ -37,7 +37,7 @@ const projects = [
             { name: 'HTML5', icon: faHtml5 },
             { name: 'CSS', icon: faCss },
         ],
-        github: 'https://github.com/EllenHalv/.NET-mvc-webapp',
+        demo: 'https://www.youtube.com/watch?v=l7inz-vErP8https://www.youtube.com/watch?v=l7inz-vErP8'
     },
     {
         name: 'Budget Tracker',
@@ -106,7 +106,7 @@ const projects = [
 const ProjectsList = () => (
     <section className={styles.Projects}>
         <div className={styles.fadeInText}>
-            <h2>Projects <FontAwesomeIcon icon={faProjectDiagram}/></h2>
+            <h2>My Recent <span className={styles.highlight}>Projects </span>{/*<FontAwesomeIcon icon={faProjectDiagram}/>*/}</h2>
         </div>
         <div className={styles.projectsGrid}>
             {projects.map((project, index) => (
@@ -129,12 +129,25 @@ const ProjectsList = () => (
                             </ul>
                         </div>
 
-                    {/* Only display if project has a github link */}
-                    {project.github && (
-                        <a href={project.github} target="_blank" rel="noopener noreferrer">
-                            See more on GitHub
-                        </a>
-                    )}
+                    <ol className={styles.ProjectLinkList}>
+                            {/* Only display if project has a github link */}
+                            {project.github && (
+                                <li className={styles.ProjectLinkButton}>
+                                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                                        GitHub
+                                    </a>
+                                </li>
+                            )}
+                            {/* Only display if project has a demo link */}
+                            {project.demo && (
+                                <li className={styles.ProjectLinkButton}>
+                                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                                        See demo
+                                    </a>
+                                </li>
+                            )}
+                    </ol>
+
                     </div>
                 </div>
             ))}

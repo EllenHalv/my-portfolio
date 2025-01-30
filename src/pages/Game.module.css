@@ -33,7 +33,7 @@ html, body {
     width: 150px;
 }
 
-button:hover {
+.newGameButton:hover {
     background: #d53f8f;
     color: #fff;
 }

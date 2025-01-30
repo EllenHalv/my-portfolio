@@ -86,7 +86,7 @@ const Game = () => {
                 <h1>Squid Game Memory</h1>
             </div>
             <div className={styles.fadeInText}>
-                <button onClick={shuffleCards}>New Game</button>
+                <button className={styles.newGameButton} onClick={shuffleCards}>New Game</button>
 
             </div>
 

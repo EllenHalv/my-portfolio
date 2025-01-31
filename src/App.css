@@ -52,12 +52,7 @@ body {
 }
 
 .bg-darkgrey {
-  /*background-color: #000000;*/
-  /*background-color: #191919;*/
     background-color: #111822;
-    /*margin: 0;*/
-    /*padding: 0;*/
-    /*height: 100%;*/
 }
 
 /*NEW*/
@@ -166,6 +161,7 @@ nav ul li a:hover {
     position: relative; /* Ensures .navbar-toggler aligns relative to the navbar */
     width: 100%;
     padding: 10px 20px; /* Optional: Add spacing around navbar content */
+    margin-left: 20px;
   }
 
   .navbar-toggler {
@@ -210,6 +206,7 @@ nav ul li a:hover {
      margin: 0;
      padding: 0;
    }
+
 }
 
 @media (max-width: 480px) {

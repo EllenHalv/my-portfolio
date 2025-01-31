@@ -8,7 +8,6 @@
 .container {
     position: relative;
     display: flex;
-    /*align-items: center;*/
     align-items: flex-start;
     justify-content: space-between;
     margin-top: 169px;
@@ -22,16 +21,14 @@
 .content {
     display: flex;
     flex-direction: column;
-    /*align-items: flex-start;*/
     z-index: 1;
     margin-top: 70px;
-
     margin-bottom: 0;
     max-width: 90vw;
 }
 
 .title {
-    font-size: clamp(21px, 6vw, 72px);
+    font-size: clamp(29px, 6vw, 72px);
     font-weight: 900;
     margin-bottom: 35px;
 }
@@ -46,10 +43,7 @@
     z-index: 1;
     width: 27%;
     max-width: 25vw;
-    /*margin-top: -375px;*/
-    /*margin-top: 0;*/
     margin-left: 60px;
-    /*margin-left: 40px;*/
     margin-right: 35px;
     animation-name: floating;
     animation-duration: 3s;
@@ -79,11 +73,7 @@
 }
 
 .homeLinks a {
-    /*margin: 50px 100px;*/
     margin: clamp(0px, 0vw, 100px);
-    /*margin: clamp(0px, 0vw, 100px);*/
-    /*NEW*/
-    /*font-size: clamp(18px, 2.5vw, 30px);*/
     font-size: 2rem;
     font-weight: 600;
     color: white;
@@ -201,8 +191,6 @@
 @media screen and (max-width: 1250px) {
     .container {
         flex-direction: column-reverse;
-        /*margin-left: 5px;*/
-        /*margin-right: 5px;*/
         margin-top: 50px;
         margin-left: 0;
         margin-right: 0;
@@ -213,14 +201,11 @@
     .description {
         margin: 0;
         padding: 0;
-        /*margin-left: 5px;*/
-        /*padding-right: 10px;*/
     }
 
     .container .homeImg {
         padding-bottom: 0;
         padding-top: 0;
-        /*margin: 0;*/
         margin-top: 50px;
         min-width: 40vw;
     }
@@ -234,13 +219,7 @@
         margin-bottom: 25px;
     }
 
-    /*.content {
-        margin-top: 70px;
-        margin-bottom: 25px;
-    }*/
-
     .title {
-        /*margin-left: -7vw;*/
         padding: 0;
     }
 
@@ -303,17 +282,13 @@
     }
 }
 
-/*@media screen and (max-width: 800px) {
-    .container .homeImg {
-        !*width: 40%;*!
-        min-width: 40vw;
-        !*margin-top: 50px;*!
-    }
-}*/
-
 @media screen and (max-width: 900px) {
     .container .homeImg {
         min-width: 45vw;
+    }
+
+    .content {
+        max-width: 95vw;
     }
 }
 
@@ -341,13 +316,18 @@
     .homeLinks {
         flex-direction: column;
         align-items: center;
-        /*margin-top: 60px;*/
+        margin-top: 40px;
     }
 
     .homeLinks a {
         font-size: 1.5rem;
     }
 
-    .container .homeImg {
+    .title {
+        margin-bottom: 20px;
+    }
+
+    .connectSection {
+        margin-top: 120px;
     }
 }

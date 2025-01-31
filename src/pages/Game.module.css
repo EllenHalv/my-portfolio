@@ -57,7 +57,7 @@ html, body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
     padding-top: 40px;
-    min-height: 50vh; /* to keep footer somewhat in check on reload */
+    /*min-height: 50vh; !* to keep footer somewhat in check on reload *!*/
 }
 
 .turns {
@@ -110,17 +110,38 @@ html, body {
     filter: blur(120px);
     z-index: 0;
 }
-
-@media (max-width: 900px) {
-    .cardGrid {
-        margin: 0;
-        padding-left: 25px;
-        padding-right: 25px;
-        display: grid;
-        padding-top: 40px;
-        min-height: 35vh; /* to keep footer somewhat in check on reload */
+@media (max-width: 1500px) {
+    .topBlur {
+        position: absolute;
+        width: 35vw;
+        height: 35vw;
+        max-width: 350px;
+        min-width: 350px;
+        top: 150px;
+        left: -15vw;
+        /*left: -10vw;*/
+        border-radius: 764px;
+        background: rgba(25, 55, 109, 0.7);
+        filter: blur(130px);
+        z-index: 0;
     }
 
+    .bottomBlur {
+        position: absolute;
+        width: 50vw;
+        height: 15vw;
+        max-width: 150px;
+        min-width: 50px;
+        top: 920px;
+        right: 0;
+        border-radius: 764px;
+        background: rgba(25, 55, 109, 0.7);
+        filter: blur(90px);
+        z-index: 0;
+    }
+}
+
+@media (max-width: 1200px) {
     .topBlur {
         position: absolute;
         width: 30vw;
@@ -148,6 +169,18 @@ html, body {
         background: rgba(25, 55, 109, 0.7);
         filter: blur(90px);
         z-index: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .cardGrid {
+        margin: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: grid;
+        padding-top: 40px;
+        gap: 10px;
+        /*min-height: 35vh; !* to keep footer somewhat in check on reload *!*/
     }
 }
 
@@ -252,5 +285,11 @@ html, body {
         background: rgba(25, 55, 109, 0.7);
         filter: blur(50px);
         z-index: 0;
+    }
+
+    .cardGrid {
+        gap: 7px;
+        padding-right: 10px;
+        padding-left: 10px;
     }
 }

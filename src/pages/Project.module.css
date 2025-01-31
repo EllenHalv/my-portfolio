@@ -183,3 +183,18 @@ html, body {
         grid-template-columns: 1fr; /* Single column for narrower screens */
     }
 }
+
+@media (max-width: 500px) {
+    .projectCard {
+        padding: 20px 7px 7px;
+        font-size: 0.9rem;
+    }
+
+    .Projects h2 {
+        margin-bottom: 40px;
+    }
+
+    .technologies {
+        margin-bottom: 0;
+    }
+}

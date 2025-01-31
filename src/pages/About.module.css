@@ -108,3 +108,16 @@ html, body {
     z-index: 0;
 }
 
+@media (max-width: 400px) {
+    .About {
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+
+    .ResumeLinkButton {
+        padding: 10px 15px;
+        margin-right: 5px;
+        margin-left: 10px;
+    }
+}
+

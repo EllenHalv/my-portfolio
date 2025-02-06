@@ -12,17 +12,73 @@ html, body {
     min-height: 100vh;
 }
 
+.resumeLinkText {
+    font-size: 1.2rem;
+    margin-top: 80px;
+}
+
 .About h2 {
     margin-top: 80px;
-    margin-bottom: 60px;
+    /*margin-bottom: 60px;*/
 }
+.aboutContainer {
+    display: flex;
+    /*CHANGED*/
+    align-items: center; /* Aligns items vertically */
+    /*align-items: flex-start;*/
+    /*justify-content: space-between; !* Spaces text and image *!*/
+    /*gap: 50px; !* Adds space between text and image *!*/
+}
+
+.textContainer {
+    flex: 1; /* Allows the text to take up remaining space */
+}
+
+.aboutImg {
+    width: 25%;
+    max-width: 25vw;
+    margin-left: 50px; /* Space between text and image */
+    margin-right: 35px;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+/*.aboutImg {
+    z-index: 1;
+    width: 27%;
+    max-width: 25vw;
+    margin-left: 60px;
+    margin-right: 35px;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}*/
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+    50% {
+        transform: translate(0, 10px);
+    }
+    100% {
+        transform: translate(0, -0px);
+    }
+}
+
 
 .container {
     display: table-column;
 }
 
 .description {
-    margin-bottom: 50px;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    /*CHANGED*/
+    /*margin-bottom: 50px;*/
 }
 
 .highlight {
@@ -86,7 +142,7 @@ html, body {
     height: 20vw;
     max-width: 350px;
     min-width: 350px;
-    top: 500px;
+    top: 600px;
     left: -10vw;
     border-radius: 764px;
     background: rgba(25, 55, 109, 0.7);
@@ -101,11 +157,41 @@ html, body {
     max-width: 150px;
     min-width: 50px;
     top: 46px;
-    right: -5vw;
+    right: 0;
     border-radius: 764px;
     background: rgba(25, 55, 109, 0.7);
     filter: blur(100px);
     z-index: 0;
+}
+
+@media (max-width: 968px) {
+    .aboutContainer {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        text-align: center;
+    }
+
+    .aboutImg {
+        width: 50%;
+        max-width: 60vw;
+        margin: 20px auto; /* Centers the image */
+    }
+
+    @keyframes floating {
+        0% {
+            transform: translate(0, 0px);
+        }
+        50% {
+            transform: translate(0, 0px);
+        }
+        100% {
+            transform: translate(0, 0px);
+        }
+    }
+
+    .resumeLinkText {
+        text-align: center;
+        padding-bottom: 130px;
+    }
 }
 
 @media (max-width: 400px) {

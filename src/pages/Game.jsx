@@ -3,12 +3,12 @@ import SingleCard from '../components/game/SingleCard'
 import styles from './Game.module.css';
 
 const cardImages = [
-    { "src": "../images/frontman.png", matched: false },
-    { "src": "../images/circle.png", matched: false },
-    { "src": "../images/square.png", matched: false },
-    { "src": "../images/star.png", matched: false },
-    { "src": "../images/triangle.png", matched: false },
-    { "src": "../images/umbrella.png", matched: false },
+    { "src": "../images/game/frontman.png", matched: false },
+    { "src": "../images/game/circle.png", matched: false },
+    { "src": "../images/game/square.png", matched: false },
+    { "src": "../images/game/star.png", matched: false },
+    { "src": "../images/game/triangle.png", matched: false },
+    { "src": "../images/game/umbrella.png", matched: false },
 ]
 
 /*

@@ -1,5 +1,5 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faEnvelope, faProjectDiagram, faKey, faDatabase, faMessage, faArrowRight, faInfinity, faNetworkWired } from '@fortawesome/free-solid-svg-icons';
+import {faEnvelope, faProjectDiagram, faKey, faDatabase, faMessage, faArrowRight, faInfinity, faNetworkWired, faFeather } from '@fortawesome/free-solid-svg-icons';
 import { faJava, faReact, faBootstrap, faMicrosoft, faPython, faDocker, faLinux, faHtml5, faCss, faAws, faGithub, faYoutube, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import React from "react";
 import styles from "./Project.module.css";
@@ -16,11 +16,12 @@ const projects = [
             { name: 'Java', icon: faJava },
             { name: 'Python', icon: faPython },
             { name: 'Docker', icon: faDocker },
-            { name: 'Azure, Azure DevOps', icon: faMicrosoft },
-            { name: 'SQL', icon: faDatabase },
+            { name: 'Azure DevOps', icon: faMicrosoft },
+            { name: 'PostgreSQL', icon: faDatabase },
             { name: 'Linux', icon: faLinux },
             { name: 'SNMP', icon: faNetworkWired },
         ],
+        img: '../images/projects/infrastructure-scanner.png'
     },
     {
         name: 'Borrow Buddy',
@@ -36,8 +37,10 @@ const projects = [
             { name: 'SignalR', icon: faMessage },
             { name: 'HTML5', icon: faHtml5 },
             { name: 'CSS', icon: faCss },
+            { name: 'MySQL', icon: faDatabase },
         ],
-        demo: 'https://www.youtube.com/watch?v=l7inz-vErP8https://www.youtube.com/watch?v=l7inz-vErP8'
+        demo: 'https://www.youtube.com/watch?v=l7inz-vErP8https://www.youtube.com/watch?v=l7inz-vErP8',
+        img: '../images/projects/borrow-buddy.png'
     },
     {
         name: 'Budget Tracker',
@@ -52,8 +55,10 @@ const projects = [
             { name: 'OAuth2', icon: faKey },
             { name: 'HTML5', icon: faHtml5 },
             { name: 'CSS', icon: faCss },
+            { name: 'MySQL', icon: faDatabase },
         ],
         github: 'https://github.com/EllenHalv/budget-tracker',
+        img: '../images/projects/budget-tracker.png'
     },
     {
         name: 'Inventory Application',
@@ -69,8 +74,10 @@ const projects = [
             { name: 'CSS', icon: faCss },
             { name: 'AWS', icon: faAws },
             { name: 'CI/CD', icon: faInfinity },
+            { name: 'Amazon RDS', icon: faDatabase },
         ],
         github: 'https://github.com/EllenHalv/YarnCRUD-AWS-CICD',
+        img: '../images/projects/inventory-app.png'
     },
     {
         name: 'Recipe Generator',
@@ -83,21 +90,24 @@ const projects = [
             'or those following specific diets, such as vegetarian or gluten-free.',
         technologies: [
             { name: 'Python', icon: faPython },
+            { name: 'API Integration', icon: faKey },
         ],
         github: 'https://github.com/EllenHalv/Recipe_Generator',
+        img: '../images/projects/meal-generator.png'
     },
     {
-        name: 'Web Service with Spring Security',
-        description: 'This project is a Java-based web service that utilizes Spring Security to implement a robust authentication system. ' +
-            'The services API is secured by using JSON Web Tokens (JWT) for stateless authentication, ',
-        idea: 'JWT is a popular standard for managing authentication and authorization, ' +
-            'and this project was created with the purpose of gaining valuable insight into effective implementation within a Spring-based architecture.',
-        usefulness: 'Allows logged in users to access and contribute to resources stored in the server.',
+        name: 'Todo App with Java Swing',
+        description: 'This project is a Java-based application using MySQL for storage and Kafka for handling events. It has a UI built with Java Swing to allow users to manage tasks.',
+        idea: 'I use ToDo lists every day. So I wanted to create a my own application for managing tasks, using some techniques I was curious about!',
+        usefulness: 'It is simple but useful! Allows users to add, check off and delete tasks!',
         technologies: [
             { name: 'Java', icon: faJava },
-            { name: 'Spring Security', icon: faKey },
+            { name: 'Java Swing', icon: faJava },
+            { name: 'MySQL', icon: faDatabase },
+            { name: 'Kafka', icon: faFeather },
         ],
-        github: 'https://github.com/EllenHalv/Web-Service-with-Spring-Security',
+        github: 'https://github.com/EllenHalv/Todo-Spring-Kafka-Application',
+        img: '../images/projects/todo-app.png'
     }
 ];
 
@@ -117,6 +127,15 @@ const ProjectsList = () => (
                         <p><strong>Description:</strong> {project.description}</p>
                         <p><strong>Idea:</strong> {project.idea}</p>
                         <p><strong>Usefulness:</strong> {project.usefulness}</p>
+
+                        {project.img && (
+                            <img
+                                className={styles.projectImg}
+                                src={project.img}
+                                alt="project img"
+                            />
+                        )}
+
                         <div className={styles.technologies}>
                             <strong>Technologies:</strong>
                             <ul>

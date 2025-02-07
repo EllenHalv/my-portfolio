@@ -206,14 +206,14 @@ html, body {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 575px) {
     .projectCard {
         padding: 20px 7px 7px;
         font-size: 0.9rem;
     }
 
     .Projects h2 {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
 
     .technologies {

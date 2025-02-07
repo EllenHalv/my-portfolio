@@ -168,7 +168,7 @@ html, body {
 @media (max-width: 968px) {
     .aboutContainer {
         flex-direction: column; /* Stack elements vertically on smaller screens */
-        text-align: center;
+        text-align: left;
     }
 
     .aboutImg {
@@ -193,18 +193,27 @@ html, body {
         text-align: center;
         padding-bottom: 130px;
     }
+
+    .description {
+        font-size: 1.1rem;
+    }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     .About {
         margin-left: 3vw;
         margin-right: 3vw;
     }
 
     .ResumeLinkButton {
-        padding: 10px 15px;
+        padding: 8px 10px;
         margin-right: 5px;
         margin-left: 10px;
+        font-size: 1rem;
+    }
+
+    .resumeLinkText {
+        font-size: 1rem;
     }
 }
 

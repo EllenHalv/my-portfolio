@@ -151,19 +151,11 @@ const ProjectsList = () => (
                     <ol className={styles.ProjectLinkList}>
                             {/* Only display if project has a github link */}
                             {project.github && (
-                                <li className={styles.ProjectLinkButton}>
-                                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                                        GitHub
-                                    </a>
-                                </li>
+                                <button className={styles.ProjectLinkButton} onClick={() => window.open(project.github, "_blank")}>GitHub</button>
                             )}
                             {/* Only display if project has a demo link */}
                             {project.demo && (
-                                <li className={styles.ProjectLinkButton}>
-                                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                                        See demo
-                                    </a>
-                                </li>
+                                <button className={styles.ProjectLinkButton} onClick={() => window.open(project.demo, "_blank")}>See demo</button>
                             )}
                     </ol>
 

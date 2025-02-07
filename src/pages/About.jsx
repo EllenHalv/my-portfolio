@@ -10,37 +10,19 @@ const About = () => (
         <div className={styles.fadeInText}>
             <h2>Learn More <span className={styles.highlight}> About Me</span></h2>
             <br/>
-            {/**/}
             <div className={styles.aboutContainer}>
                 <div className={styles.textContainer}>
-                    <p className={styles.description}>Hi, I'm Ellen Halvardsson, a software developer with a passion for cloud technologies and full-stack development.
-                        I thrive on creativity and problem-solving, combining technical skills with innovative thinking to build solutions that improve everyday life.
+                    <p className={styles.description}>Hi, I'm Ellen Halvardsson, a software developer with a passion for full-stack development and cloud technologies.
+                        I thrive on creativity and problem-solving, and strive to combine technical skills with innovative thinking to build solutions that improve everyday life.
                     </p>
-                    <p className={styles.description}>Beyond coding, I enjoy crafting and exploring ways to express myself through design and technology. I enjoy knitting, crocheting, and digital design,
+                    <p className={styles.description}>Beyond coding, I enjoy crafting and exploring ways to express myself through design and technology. I enjoy knitting, crocheting, digital design and taking care of my plants,
                         and I'm always seeking new inspiration and opportunities for growth.
                     </p>
                 </div>
                 <img className={styles.aboutImg} src="../images/about.png" alt="about img"/>
             </div>
-            {/**/}
-
-            {/*<img
-                className={styles.aboutImg}
-                src="../images/about.png"
-                alt="about img"
-            />
-            <div>
-                <p className={styles.description}>Hi, I'm Ellen Halvardsson, a software developer with a passion for cloud technologies and full-stack
-                    development.
-                    I thrive on creativity and problem-solving, combining technical skills with innovative thinking to build
-                    solutions that improve everyday life.
-                    Beyond coding, I enjoy crafting and exploring ways to express myself through design and technology. I
-                    enjoy knitting, crocheting and digital design,
-                    and I'm always seeking new inspiration and opportunities for growth.</p>
-            </div>*/}
             <div>
                 <p className={styles.resumeLinkText}>View my Resume <FontAwesomeIcon icon={faArrowRight}/>
-                    {/*{' '}*/}
                     <button className={styles.ResumeLinkButton} onClick={() => window.open("/Ellen-Halvardsson-CV.pdf", "_blank")}>Click here</button>
                 </p>
             </div>

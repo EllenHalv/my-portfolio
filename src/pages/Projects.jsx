@@ -1,5 +1,5 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faEnvelope, faProjectDiagram, faKey, faDatabase, faMessage, faArrowRight, faInfinity, faNetworkWired, faFeather } from '@fortawesome/free-solid-svg-icons';
+import {faEnvelope, faProjectDiagram, faKey, faDatabase, faMessage, faArrowRight, faInfinity, faNetworkWired, faFeather, faChartSimple } from '@fortawesome/free-solid-svg-icons';
 import { faJava, faReact, faBootstrap, faMicrosoft, faPython, faDocker, faLinux, faHtml5, faCss, faAws, faGithub, faYoutube, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import React from "react";
 import styles from "./Project.module.css";
@@ -10,7 +10,7 @@ const projects = [
         name: 'Infrastructure Scanner',
         description: 'A tool for scanning system infrastructure and generating reports. ' +
             'Using Java and Python, the application communicates with devices using SNMP to collect data that can be used to monitor its status and health.',
-        idea: 'Developed during my internship for the purpose of being able to automate system scanning.',
+        idea: 'Developed during an internship for the purpose of being able to scan and monitor devices in the network.',
         usefulness: 'Helps organizations monitor devices efficiently. Through Grafana, users can easily view the status of their devices.',
         technologies: [
             { name: 'Java', icon: faJava },
@@ -20,6 +20,7 @@ const projects = [
             { name: 'PostgreSQL', icon: faDatabase },
             { name: 'Linux', icon: faLinux },
             { name: 'SNMP', icon: faNetworkWired },
+            { name: 'Grafana', icon: faChartSimple },
         ],
         img: '../images/projects/infrastructure-scanner.png'
     },
@@ -47,8 +48,8 @@ const projects = [
         description: 'Budget Tracker is a full-stack application designed to help users manage their personal finances.\n' +
             'The application allows users to create budget goals, track their expenses, and provides a clear overview of their budget status.\n' +
             'Built with Java and React, as well as OAuth2 integration for secure login and streamline authentication.',
-        idea: 'This project was inspired by the need for better personal finance tools.',
-        usefulness: 'Helps users track their expenses and remaining budget. Acts as a central place for keeping track of spendings today and all spendings in the past.',
+        idea: 'The project came to life during my time as a student. With a limited budget, I wanted to create a personal finance tool that could help me and my family set clear goals and stick to them.',
+        usefulness: 'Helps users track their expenses and remaining budget. A place for keeping track of current spendings and all spendings in the past.',
         technologies: [
             { name: 'Java', icon: faJava },
             { name: 'React', icon: faReact },
@@ -83,8 +84,8 @@ const projects = [
         name: 'Recipe Generator',
         description: 'The Recipe Generator is a Python-based application designed to simplify meal planning. ' +
             'It integrates with Spoonaculars API to fetch recipes. ' +
-            'The user can randomize a recipe, get multiple recipes based on ingredients or dietary restrictions.',
-        idea: 'The idea stemmed from the challenge of deciding what to cook with limited ingredients or specific dietary needs. ' +
+            'The user can randomize a recipe, or get multiple recipes based on ingredients or dietary restrictions.',
+        idea: 'The challenge of deciding what to cook inspired me to create an application that makes that decision for me! ' +
             'The Recipe Generator was created to inspire users with a variety of recipes tailored to their input.',
         usefulness: 'This application is particularly helpful for people looking for new meal ideas or inspiration, ' +
             'or those following specific diets, such as vegetarian or gluten-free.',
@@ -98,7 +99,7 @@ const projects = [
     {
         name: 'Todo App with Java Swing',
         description: 'This project is a Java-based application using MySQL for storage and Kafka for handling events. It has a UI built with Java Swing to allow users to manage tasks.',
-        idea: 'I use ToDo lists every day. So I wanted to create a my own application for managing tasks, using some techniques I was curious about!',
+        idea: 'I use ToDo lists every day. So I wanted to create my own application for managing tasks - using some techniques I was curious about!',
         usefulness: 'It is simple but useful! Allows users to add, check off and delete tasks!',
         technologies: [
             { name: 'Java', icon: faJava },
@@ -151,19 +152,11 @@ const ProjectsList = () => (
                     <ol className={styles.ProjectLinkList}>
                             {/* Only display if project has a github link */}
                             {project.github && (
-                                <li className={styles.ProjectLinkButton}>
-                                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                                        GitHub
-                                    </a>
-                                </li>
+                                <button className={styles.ProjectLinkButton} onClick={() => window.open(project.github, "_blank")}>GitHub</button>
                             )}
                             {/* Only display if project has a demo link */}
                             {project.demo && (
-                                <li className={styles.ProjectLinkButton}>
-                                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                                        See demo
-                                    </a>
-                                </li>
+                                <button className={styles.ProjectLinkButton} onClick={() => window.open(project.demo, "_blank")}>See demo</button>
                             )}
                     </ol>
 

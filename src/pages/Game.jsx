@@ -11,6 +11,7 @@ const cardImages = [
     { "src": "../images/game/umbrella.png", matched: false },
 ]
 
+// Space animal cards
 /*
 const cardImages = [
     { "src": "../images/fox.png", matched: false },

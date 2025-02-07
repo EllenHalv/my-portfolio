@@ -1,14 +1,27 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEnvelope, faProjectDiagram, faKey, faDatabase, faMessage, faArrowRight, faInfinity, faNetworkWired, faFeather, faChartSimple } from '@fortawesome/free-solid-svg-icons';
-import { faJava, faReact, faBootstrap, faMicrosoft, faPython, faDocker, faLinux, faHtml5, faCss, faAws, faGithub, faYoutube, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faJava, faReact, faBootstrap, faMicrosoft, faPython, faDocker, faLinux, faHtml5, faCss, faAws, faGithub, faYoutube, faLinkedin, faSquareJs } from '@fortawesome/free-brands-svg-icons';
 import React from "react";
 import styles from "./Project.module.css";
 
 const projects = [
-
+    {
+        name: 'Web Portfolio',
+        description: 'My Web Portfolio is my latest project and you are looking right at it! I wanted to create a personal portfolio to showcase my skills and projects in a fun format. ' +
+            'During the development of this website I have improved my skills in JavaScript, React.js, HTML and CSS, and also created my first game!',
+        technologies: [
+            { name: 'JavaScript', icon: faSquareJs },
+            { name: 'React', icon: faReact },
+            { name: 'HTML5', icon: faHtml5 },
+            { name: 'CSS', icon: faCss },
+            { name: 'AWS', icon: faAws },
+        ],
+        github: 'https://github.com/EllenHalv/my-portfolio',
+        img: '../images/projects/web-portfolio.png'
+    },
     {
         name: 'Infrastructure Scanner',
-        description: 'A tool for scanning system infrastructure and generating reports. ' +
+        description: 'The Infrastructure Scanner is a tool for scanning system infrastructure and generating reports. ' +
             'Using Java and Python, the application communicates with devices using SNMP to collect data that can be used to monitor its status and health.',
         idea: 'Developed during an internship for the purpose of being able to scan and monitor devices in the network.',
         usefulness: 'Helps organizations monitor devices efficiently. Through Grafana, users can easily view the status of their devices.',
@@ -52,6 +65,7 @@ const projects = [
         usefulness: 'Helps users track their expenses and remaining budget. A place for keeping track of current spendings and all spendings in the past.',
         technologies: [
             { name: 'Java', icon: faJava },
+            { name: 'JavaScript', icon: faSquareJs },
             { name: 'React', icon: faReact },
             { name: 'OAuth2', icon: faKey },
             { name: 'HTML5', icon: faHtml5 },
@@ -63,13 +77,14 @@ const projects = [
     },
     {
         name: 'Inventory Application',
-        description: 'A web application built for keeping track of inventory. ' +
+        description: 'The Inventory Application is a web app built for keeping track of inventory. ' +
             'The app is hosted on AWS, showcasing CI/CD implementation for streamlined updates and reliable deployment.',
         idea: 'This project was inspired by the need for better personal inventory tracking of hobby materials. As a knitter and crocheter, I have a lot of yarn. If you know, you know...',
         usefulness: 'By having a central place for tracking inventory, ' +
             'users can easily see what they have in stock and have the ability to update the inventory when their stock changes.',
         technologies: [
             { name: 'Java', icon: faJava },
+            { name: 'JavaScript', icon: faSquareJs },
             { name: 'React', icon: faReact },
             { name: 'HTML5', icon: faHtml5 },
             { name: 'CSS', icon: faCss },
@@ -79,6 +94,20 @@ const projects = [
         ],
         github: 'https://github.com/EllenHalv/YarnCRUD-AWS-CICD',
         img: '../images/projects/inventory-app.png'
+    },
+    {
+        name: 'ToDo App with Java Swing',
+        description: 'The ToDo App is a Java-based application using MySQL for storage and Kafka for handling events. It has a UI built with Java Swing to allow users to manage tasks.',
+        idea: 'I use ToDo lists every day. So I wanted to create my own application for managing tasks - using some techniques I was curious about!',
+        usefulness: 'It is simple but useful! Allows users to add, check off and delete tasks!',
+        technologies: [
+            { name: 'Java', icon: faJava },
+            { name: 'Java Swing', icon: faJava },
+            { name: 'MySQL', icon: faDatabase },
+            { name: 'Kafka', icon: faFeather },
+        ],
+        github: 'https://github.com/EllenHalv/Todo-Spring-Kafka-Application',
+        img: '../images/projects/todo-app.png'
     },
     {
         name: 'Recipe Generator',
@@ -95,20 +124,6 @@ const projects = [
         ],
         github: 'https://github.com/EllenHalv/Recipe_Generator',
         img: '../images/projects/meal-generator.png'
-    },
-    {
-        name: 'Todo App with Java Swing',
-        description: 'This project is a Java-based application using MySQL for storage and Kafka for handling events. It has a UI built with Java Swing to allow users to manage tasks.',
-        idea: 'I use ToDo lists every day. So I wanted to create my own application for managing tasks - using some techniques I was curious about!',
-        usefulness: 'It is simple but useful! Allows users to add, check off and delete tasks!',
-        technologies: [
-            { name: 'Java', icon: faJava },
-            { name: 'Java Swing', icon: faJava },
-            { name: 'MySQL', icon: faDatabase },
-            { name: 'Kafka', icon: faFeather },
-        ],
-        github: 'https://github.com/EllenHalv/Todo-Spring-Kafka-Application',
-        img: '../images/projects/todo-app.png'
     }
 ];
 
@@ -125,9 +140,14 @@ const ProjectsList = () => (
                 <div className={styles.fadeInText}>
                     <div className={styles.projectCard} key={index}>
                         <h3>{project.name}</h3>
-                        <p><strong>Description:</strong> {project.description}</p>
-                        <p><strong>Idea:</strong> {project.idea}</p>
-                        <p><strong>Usefulness:</strong> {project.usefulness}</p>
+                        <p>{project.description}</p>
+                        {project.idea && (
+                            <p><strong>Idea:</strong> {project.idea}</p>
+                        )}
+
+                        {project.idea && (
+                            <p><strong>Usefulness:</strong> {project.usefulness}</p>
+                        )}
 
                         {project.img && (
                             <img

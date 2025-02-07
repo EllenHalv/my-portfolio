@@ -41,14 +41,12 @@ html, body {
 .cardContainer {
     padding: 20px;
     border: none;
-    max-width: 900px; /* Optional: Restrict the width */
+    max-width: 900px;
     margin-top: 20px;
     margin-bottom: 15px;
-    /**/
     display: flex;
     justify-content: center;
     align-items: center;
-    /*min-height: 90vh;*/
 }
 
 .cardGrid {
@@ -57,7 +55,6 @@ html, body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
     padding-top: 40px;
-    /*min-height: 50vh; !* to keep footer somewhat in check on reload *!*/
 }
 
 .turns {
@@ -68,8 +65,6 @@ html, body {
 .fadeInText {
     animation: fadeIn 1.5s;
     overflow: hidden;
-    /*width: 100%;*/
-    /*height: 100%;*/
 }
 
 @keyframes fadeIn {
@@ -112,63 +107,38 @@ html, body {
 }
 @media (max-width: 1500px) {
     .topBlur {
-        position: absolute;
         width: 35vw;
         height: 35vw;
-        max-width: 350px;
-        min-width: 350px;
+        max-width: 300px;
+        min-width: 300px;
         top: 150px;
         left: -15vw;
-        /*left: -10vw;*/
-        border-radius: 764px;
-        background: rgba(25, 55, 109, 0.7);
         filter: blur(130px);
-        z-index: 0;
     }
 
     .bottomBlur {
-        position: absolute;
         width: 50vw;
         height: 15vw;
         max-width: 150px;
         min-width: 50px;
         top: 920px;
         right: 0;
-        border-radius: 764px;
-        background: rgba(25, 55, 109, 0.7);
         filter: blur(90px);
-        z-index: 0;
     }
 }
 
 @media (max-width: 1200px) {
     .topBlur {
-        position: absolute;
         width: 30vw;
-        height: 15vw;
-        max-width: 350px;
-        min-width: 350px;
-        top: 150px;
+        max-width: 250px;
+        min-width: 150px;
+        top: 100px;
         left: -20vw;
-        /*left: -10vw;*/
-        border-radius: 764px;
-        background: rgba(25, 55, 109, 0.7);
         filter: blur(90px);
-        z-index: 0;
     }
 
     .bottomBlur {
-        position: absolute;
         width: 30vw;
-        height: 15vw;
-        max-width: 150px;
-        min-width: 50px;
-        top: 920px;
-        right: 0;
-        border-radius: 764px;
-        background: rgba(25, 55, 109, 0.7);
-        filter: blur(90px);
-        z-index: 0;
     }
 }
 
@@ -180,7 +150,6 @@ html, body {
         display: grid;
         padding-top: 40px;
         gap: 10px;
-        /*min-height: 35vh; !* to keep footer somewhat in check on reload *!*/
     }
 }
 
@@ -191,43 +160,17 @@ html, body {
     }
 
     .cardContainer {
-        /*background-color: rgb(0, 0, 0); !* Dark background for contrast *!*/
         padding: clamp(10px, 1vw, 20px);
         border: none;
         min-width: clamp(250px, 90vw, 750px);
-        /*max-width: 750px; !* Optional: Restrict the width *!*/
         margin-top: 30px;
         margin-bottom: 15px;
-    }
-
-    .bottomBlur {
-        position: absolute;
-        width: 30vw;
-        height: 15vw;
-        max-width: 150px;
-        min-width: 50px;
-        top: 1200px;
-        right: 0;
-        border-radius: 764px;
-        background: rgba(25, 55, 109, 0.7);
-        filter: blur(70px);
-        z-index: 0;
     }
 }
 
 @media (max-width: 650px) {
     .bottomBlur {
-        position: absolute;
-        width: 30vw;
-        height: 15vw;
-        max-width: 150px;
-        min-width: 50px;
         top: 1100px;
-        right: 0;
-        border-radius: 764px;
-        background: rgba(25, 55, 109, 0.7);
-        filter: blur(70px);
-        z-index: 0;
     }
 }
 
@@ -243,48 +186,21 @@ html, body {
     }
 
     .topBlur {
-        position: absolute;
-        width: 30vw;
-        height: 15vw;
-        max-width: 350px;
-        min-width: 350px;
         top: 170px;
         left: -70vw;
-        /*left: -10vw;*/
-        border-radius: 764px;
-        background: rgba(25, 55, 109, 0.7);
         filter: blur(50px);
-        z-index: 0;
     }
 
     .bottomBlur {
-        position: absolute;
-        width: 30vw;
-        height: 15vw;
-        max-width: 150px;
-        min-width: 50px;
         top: 950px;
-        right: 0;
-        border-radius: 764px;
-        background: rgba(25, 55, 109, 0.7);
         filter: blur(60px);
-        z-index: 0;
     }
 }
 
 @media (max-width: 450px) {
     .bottomBlur {
-        position: absolute;
-        width: 30vw;
-        height: 15vw;
-        max-width: 150px;
-        min-width: 50px;
         top: 820px;
-        right: 0;
-        border-radius: 764px;
-        background: rgba(25, 55, 109, 0.7);
         filter: blur(50px);
-        z-index: 0;
     }
 
     .cardGrid {

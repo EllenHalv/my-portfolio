@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import SingleCard from '../components/game/SingleCard'
+import SingleCard from './SingleCard'
 import styles from './Game.module.css';
 
 const cardImages = [
@@ -75,7 +75,7 @@ const Game = () => {
         setDisabled(false)
     }
 
-    //start a new game automagically
+    // start a new game automagically
     useEffect(() => {
         shuffleCards()
     }, [])
@@ -88,30 +88,24 @@ const Game = () => {
             </div>
             <div className={styles.fadeInText}>
                 <button className={styles.newGameButton} onClick={shuffleCards}>New Game</button>
-
             </div>
 
                 <div className={styles.gameContainer}>
                     <div className={styles.cardGrid}>
                         {cards.map(card => (
-                            // <div className={styles.fadeInText}>
-                                <SingleCard
-                                    key={card.id}
-                                    card={card}
-                                    handleChoice={handleChoice}
-                                    flipped={card === choiceOne || card === choiceTwo || card.matched}
-                                    disabled={disabled}
-                                />
-                            // </div>
+                            <SingleCard
+                                key={card.id}
+                                card={card}
+                                handleChoice={handleChoice}
+                                flipped={card === choiceOne || card === choiceTwo || card.matched}
+                                disabled={disabled}
+                            />
                         ))}
                     </div>
                 </div>
             <div className={styles.fadeInText}>
                 <p className={styles.turns}>Turns: {turns}</p>
-
             </div>
-
-
             <div className={styles.topBlur}/>
             <div className={styles.bottomBlur}/>
         </div>

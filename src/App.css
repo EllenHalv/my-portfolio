@@ -2,16 +2,6 @@
   text-align: center;
 }
 
-/*! Themestr.app `Darkster` Bootstrap 4.3.1 theme */
-@import url(https://fonts.googleapis.com/css?family=Comfortaa:200,300,400,700);
-/*! Import Bootstrap 4 variables */
-/*!
- * Bootstrap v4.1.1 (https://getbootstrap.com/)
- * Copyright 2011-2018 The Bootstrap Authors
- * Copyright 2011-2018 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-
 *,
 *::before,
 *::after {
@@ -41,9 +31,7 @@ section h2 {
 
 body {
   margin: 0;
-  overflow-x: hidden; /* No scrollbar! */
-  /*overflow: hidden;*/
-
+  overflow-x: hidden; /* No scrollbar */
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -55,7 +43,6 @@ body {
     background-color: #111822;
 }
 
-/*NEW*/
 .main-header {
   display: flex;
   justify-content: flex-start;
@@ -66,7 +53,6 @@ body {
     margin-left: 45px;
 }
 
-/* Add this CSS to disable scrolling */
 .no-scroll {
   overflow: hidden;
 }
@@ -84,9 +70,7 @@ body {
 }
 
 .nav-item {
-  /*font-size: 1rem;*/
   font-size: clamp(1rem, 5vw, 1.2rem);
-  /*font-size: clamp(15px, 1.5vw, 18px);*/
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -94,14 +78,11 @@ body {
 /* Animation for menu */
 nav ul li a {
   transition: background-color 0.3s, transform 0.3s;
-  /*font-size: clamp(15px, 1.5vw, 18px); !* Adjust font size dynamically *!*/
 }
 
 nav ul li a:hover {
   transform: scale(1.1);
 }
-
-/* MY ADDED CSS */
 
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
@@ -123,23 +104,18 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /*margin-top: 120px;*/
     gap: 80px;
     margin-top: 70px;
   }
 
   .home-links a {
     margin: 0 50px;
-    /*font-size: 1.3rem;*/
   }
 
-  /*NEW*/
   .main-header {
     display: flex;
-    /*justify-content: flex-end;*/
   }
 
-  /* hidden sliding md menu */
   .navbar-nav {
     display: flex;
     position: fixed;
@@ -160,17 +136,14 @@ nav ul li a:hover {
   .navbar {
     position: relative; /* Ensures .navbar-toggler aligns relative to the navbar */
     width: 100%;
-    padding: 10px 20px; /* Optional: Add spacing around navbar content */
+    padding: 10px 20px;
     margin-left: 20px;
   }
 
   .navbar-toggler {
     display: block;
     position: absolute; /* Aligns relative to the .navbar */
-    /*top: 50%; !* Center vertically within the navbar *!*/
-    /*top: -35vh;*/
-    /*transform: translateY(-50%); !* Corrects centering offset *!*/
-    right: 1rem; /* Stays to the right of the navbar */
+    right: 1rem;
     font-size: 1.5rem;
     cursor: pointer;
     z-index: 100; /* Ensures it appears above other navbar content */
@@ -188,14 +161,14 @@ nav ul li a:hover {
   }
 
   .nav-item .nav-link {
-    color: #fff; /* White text for links */
-    font-size: 1.5rem; /* Larger font for mobile */
+    color: #fff;
+    font-size: 1.5rem;
     text-decoration: none;
     padding: 10px;
   }
 
   .nav-link:hover {
-    color: #6c757d; /* Slightly lighter on hover */
+    color: #6c757d;
   }
 
    .navbar ul {
@@ -206,39 +179,27 @@ nav ul li a:hover {
      margin: 0;
      padding: 0;
    }
-
 }
 
 @media (max-width: 480px) {
-  /*.background-section {
-    min-height: clamp(10vh, 5vw, 20vh);
-  }*/
-
   .home-links {
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /*margin-top: 120px;*/
     gap: 80px;
   }
 
   .home-links a {
     margin: 0 30px;
-    /*font-size: 1.3rem;*/
   }
 
   .background-content .links {
-    /* REMOVED */
-    /*margin-top: 80%;*/
     display: flex;
-    /*NEW*/
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 150px;
     margin-bottom: 20px;
-    /**/
-    /*gap: 100px;*/
   }
 }

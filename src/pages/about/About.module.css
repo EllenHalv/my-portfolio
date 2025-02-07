@@ -20,15 +20,10 @@ html, body {
 
 .About h2 {
     margin-top: 80px;
-    /*margin-bottom: 60px;*/
 }
 .aboutContainer {
     display: flex;
-    /*CHANGED*/
-    align-items: center; /* Aligns items vertically */
-    /*align-items: flex-start;*/
-    /*justify-content: space-between; !* Spaces text and image *!*/
-    /*gap: 50px; !* Adds space between text and image *!*/
+    align-items: center;
 }
 
 .textContainer {
@@ -38,25 +33,13 @@ html, body {
 .aboutImg {
     width: 25%;
     max-width: 25vw;
-    margin-left: 50px; /* Space between text and image */
+    margin-left: 50px;
     margin-right: 35px;
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
-
-/*.aboutImg {
-    z-index: 1;
-    width: 27%;
-    max-width: 25vw;
-    margin-left: 60px;
-    margin-right: 35px;
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-}*/
 
 @keyframes floating {
     0% {
@@ -78,8 +61,6 @@ html, body {
 .description {
     font-size: 1.2rem;
     line-height: 1.7;
-    /*CHANGED*/
-    /*margin-bottom: 50px;*/
 }
 
 .highlight {
@@ -101,15 +82,7 @@ html, body {
 .ResumeLinkButton a {
     color: rgb(0, 0, 0);
     text-decoration: none;
-    /*margin-right: 10px;*/
 }
-
-/*button:hover {
-    color: #000000;
-    transform: scale(105%);
-    transition: transform 0.3s ease;
-    background-color: rgb(74, 163, 253);
-}*/
 
 .ResumeLinkButton:hover {
     color: #000000;
@@ -121,19 +94,16 @@ html, body {
 .fadeInText {
     animation: fadeIn 1.5s;
     width: 100%;
-
 }
 
 @keyframes fadeIn {
     0% {
         opacity: 0;
         margin-left: -5%;
-        /*width: 300%;*/
     }
     100% {
         opacity: 1;
         margin-left: 0;
-        /*width: 60%;*/
     }
 }
 
@@ -143,7 +113,7 @@ html, body {
     height: 20vw;
     max-width: 350px;
     min-width: 350px;
-    top: 600px;
+    top: 750px;
     left: -10vw;
     border-radius: 764px;
     background: rgba(25, 55, 109, 0.7);
@@ -167,14 +137,14 @@ html, body {
 
 @media (max-width: 968px) {
     .aboutContainer {
-        flex-direction: column; /* Stack elements vertically on smaller screens */
+        flex-direction: column;
         text-align: left;
     }
 
     .aboutImg {
         width: 50%;
         max-width: 60vw;
-        margin: 20px auto; /* Centers the image */
+        margin: 20px auto;
     }
 
     @keyframes floating {

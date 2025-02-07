@@ -17,11 +17,9 @@ footer {
     position: relative;
     width: 100%;
     background-color: #11141b;
-    /*background-color: #141a23; !* Add a background color for the footer *!*/
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /*padding: 15px 3vw;*/
     box-sizing: border-box;
 }
 

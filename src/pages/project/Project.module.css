@@ -5,12 +5,8 @@ html, body {
 }
 
 .Projects {
-    /*max-width: 860px;*/
-    /*margin: 40px auto;*/
     display: grid;
     flex-direction: column;
-    /*align-items: center;*/
-    /*align-content: center;*/
     justify-content: center;
     padding-bottom: 130px;
     min-height: 100vh;
@@ -26,20 +22,9 @@ html, body {
     color: rgb(74, 163, 253);
 }
 
-/*.Projects .projectsGrid {
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    display: grid;
-    grid-template-columns: clamp(225px, 92vw, 755px);
-    !*grid-template-columns: clamp(225px, 92vw, 755px);*!
-    gap: 60px;
-    margin-top: 100px;
-    !*width: 100%;*!
-    max-width: 92vw;
-}*/
-
 .Projects .projectsGrid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns by default */
+    grid-template-columns: repeat(2, 1fr); /* Two columns as default */
     gap: 60px;
     margin-top: 60px;
     max-width: 92vw;
@@ -52,13 +37,10 @@ html, body {
     box-shadow: 0 4px 6px rgb(0, 0, 0);
     background-color: #121822;
     text-align: left;
-    /*margin-bottom: 50px;*/
-    justify-content: space-between; /* Push the link to the bottom */
+    justify-content: space-between;
     position: relative;
     z-index: 1;
-    /*width: 600px;*/
     min-height: 100%;
-    /* added below to align all content similarly */
     display: flex;
     flex-direction: column;
 }
@@ -85,7 +67,6 @@ html, body {
 
 .technologies {
     margin-top: 30px;
-    /*margin-bottom: 0;*/
     margin-bottom: 25px;
     text-align: center;
 }
@@ -101,8 +82,6 @@ html, body {
 }
 
 .projectCard .technologies ul li {
-    /*margin-right: 10px;*/
-    /*margin-bottom: 5px;*/
     padding: 5px 10px;
     background: rgba(0, 0, 0, 0.2);
     border-radius: 5px;
@@ -114,13 +93,6 @@ html, body {
     transition: transform 1s ease;
     box-shadow: 0 5px 12px 4px rgb(0, 0, 0);
 }
-
-/*.projectCard a {
-    text-decoration: none;
-    position: absolute; !* Anchors the link to the bottom-left *!
-    bottom: 30px;
-    left: 25px;
-}*/
 
 .ProjectLinkList {
     display: flex;
@@ -144,7 +116,6 @@ html, body {
 .ProjectLinkButton a {
     color: rgb(0, 0, 0);
     text-decoration: none;
-    /*margin-right: 10px;*/
 }
 
 .ProjectLinkButton:hover {
@@ -162,12 +133,10 @@ html, body {
     0% {
         opacity: 1;
         margin-left: -5%;
-        /*width: 300%;*/
     }
     100% {
         opacity: 1;
         margin-left: 0;
-        /*width: 60%;*/
     }
 }
 

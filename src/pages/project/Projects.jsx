@@ -8,7 +8,7 @@ const projects = [
     {
         name: 'Web Portfolio',
         description: 'My Web Portfolio is my latest project and you are looking right at it! I wanted to create a personal portfolio to showcase my skills and projects in a fun format. ' +
-            'During the development of this website I have improved my skills in JavaScript, React.js, HTML and CSS, and also created my first game!',
+            'During the development of this website I have improved my skills in frontend technologies and in making responsive web applications. I have also created my very first game!',
         technologies: [
             { name: 'JavaScript', icon: faSquareJs },
             { name: 'React', icon: faReact },
@@ -132,7 +132,7 @@ const projects = [
 const ProjectsList = () => (
     <section className={styles.Projects}>
         <div className={styles.fadeInText}>
-            <h2>My Recent <span className={styles.highlight}>Projects </span>{/*<FontAwesomeIcon icon={faProjectDiagram}/>*/}</h2>
+            <h2>My Recent <span className={styles.highlight}>Projects </span></h2>
         </div>
         <div className={styles.projectsGrid}>
             {projects.map((project, index) => (
@@ -141,14 +141,15 @@ const ProjectsList = () => (
                     <div className={styles.projectCard} key={index}>
                         <h3>{project.name}</h3>
                         <p>{project.description}</p>
+                        {/* Only display if project has a idea text */}
                         {project.idea && (
                             <p><strong>Idea:</strong> {project.idea}</p>
                         )}
-
-                        {project.idea && (
+                        {/* Only display if project has a usefullness text */}
+                        {project.usefulness && (
                             <p><strong>Usefulness:</strong> {project.usefulness}</p>
                         )}
-
+                        {/* Only display if project has a img */}
                         {project.img && (
                             <img
                                 className={styles.projectImg}
@@ -156,7 +157,6 @@ const ProjectsList = () => (
                                 alt="project img"
                             />
                         )}
-
                         <div className={styles.technologies}>
                             <strong>Technologies:</strong>
                             <ul>
@@ -168,7 +168,6 @@ const ProjectsList = () => (
                                 ))}
                             </ul>
                         </div>
-
                     <ol className={styles.ProjectLinkList}>
                             {/* Only display if project has a github link */}
                             {project.github && (
@@ -179,7 +178,6 @@ const ProjectsList = () => (
                                 <button className={styles.ProjectLinkButton} onClick={() => window.open(project.demo, "_blank")}>See demo</button>
                             )}
                     </ol>
-
                     </div>
                 </div>
             ))}

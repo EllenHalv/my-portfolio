@@ -23,8 +23,6 @@ const Home = () => (
                     </a>
                 </div>
             </div>
-
-
             <section className={styles.connectSection}>
                 <div className={styles.fadeInText}>
                     <h2>FIND ME ON</h2>
@@ -32,11 +30,6 @@ const Home = () => (
                     <div className={styles.fadeInText}>
                     </div>
                     <div className={styles.fadeInText}>
-                        {/*<ol className={styles.socialLinks}>
-                            <li><FontAwesomeIcon icon={faLinkedin}/><a href="https://www.linkedin.com/in/ellen-halv/" target="_blank" rel="noopener noreferrer"></a></li>
-                            <li><FontAwesomeIcon icon={faGithub}/><a href="https://github.com/EllenHalv" target="_blank" rel="noopener noreferrer"></a></li>
-                            <li><FontAwesomeIcon icon={faYoutube}/><a href="https://www.youtube.com/@TheOnlyExceptionYT" target="_blank" rel="noopener noreferrer"></a></li>
-                        </ol>*/}
                         <ol className={styles.socialLinks}>
                             <li>
                                 <a href="https://www.linkedin.com/in/ellen-halv/" target="_blank" rel="noopener noreferrer">
@@ -55,12 +48,8 @@ const Home = () => (
                             </li>
                         </ol>
                     </div>
-                    {/*<div className={styles.fadeInText}>
-                        <p><FontAwesomeIcon icon={faMessage}/> E-mail: <a href="mailto:ellenhalvardsson@gmail.com">ellenhalvardsson@gmail.com</a></p>
-                    </div>*/}
                 </div>
             </section>
-
         </div>
         <div className={styles.fadeInImage}></div>
         <img

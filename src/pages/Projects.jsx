@@ -1,5 +1,5 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faEnvelope, faProjectDiagram, faKey, faDatabase, faMessage, faArrowRight, faInfinity, faNetworkWired, faFeather } from '@fortawesome/free-solid-svg-icons';
+import {faEnvelope, faProjectDiagram, faKey, faDatabase, faMessage, faArrowRight, faInfinity, faNetworkWired, faFeather, faChartSimple } from '@fortawesome/free-solid-svg-icons';
 import { faJava, faReact, faBootstrap, faMicrosoft, faPython, faDocker, faLinux, faHtml5, faCss, faAws, faGithub, faYoutube, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import React from "react";
 import styles from "./Project.module.css";
@@ -20,6 +20,7 @@ const projects = [
             { name: 'PostgreSQL', icon: faDatabase },
             { name: 'Linux', icon: faLinux },
             { name: 'SNMP', icon: faNetworkWired },
+            { name: 'Grafana', icon: faChartSimple },
         ],
         img: '../images/projects/infrastructure-scanner.png'
     },

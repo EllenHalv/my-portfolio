@@ -1,6 +1,6 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faEnvelope, faProjectDiagram, faKey, faDatabase, faMessage, faArrowRight, faInfinity, faNetworkWired, faFeather, faChartSimple } from '@fortawesome/free-solid-svg-icons';
-import { faJava, faReact, faBootstrap, faMicrosoft, faPython, faDocker, faLinux, faHtml5, faCss, faAws, faGithub, faYoutube, faLinkedin, faSquareJs } from '@fortawesome/free-brands-svg-icons';
+import { faProjectDiagram, faKey, faDatabase, faInfinity, faNetworkWired, faFeather, faChartSimple, faMessage } from '@fortawesome/free-solid-svg-icons';
+import { faJava, faReact, faBootstrap, faMicrosoft, faPython, faDocker, faLinux, faHtml5, faCss, faAws, faSquareJs } from '@fortawesome/free-brands-svg-icons';
 import React from "react";
 import styles from "./Project.module.css";
 

@@ -1,7 +1,7 @@
 import React from "react";
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faEnvelope, faProjectDiagram, faKey, faDatabase, faMessage, faArrowRight, faInfinity, faNetworkWired } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import styles from './About.module.css';
 
 

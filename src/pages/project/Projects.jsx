@@ -24,7 +24,7 @@ const projects = [
         description: 'The Infrastructure Scanner is a tool for scanning system infrastructure and generating reports. ' +
             'Using Java and Python, the application communicates with devices using SNMP to collect data that can be used to monitor its status and health.',
         idea: 'Developed during an internship for the purpose of being able to scan and monitor devices in the network.',
-        usefulness: 'Helps organizations monitor devices efficiently. Through Grafana, users can easily view the status of their devices.',
+        usefulness: 'Helps to monitor devices, and through Grafana get a view of their status and other useful information.',
         technologies: [
             { name: 'Java', icon: faJava },
             { name: 'Python', icon: faPython },

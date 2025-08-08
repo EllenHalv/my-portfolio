@@ -7,7 +7,7 @@ import styles from "./Project.module.css";
 const projects = [
     {
         name: 'Web Portfolio',
-        description: 'My Web Portfolio is my latest project and you are looking right at it! I wanted to create a personal portfolio to showcase my skills and projects in a fun format. ' +
+        description: 'I wanted to create a portfolio to showcase my skills and projects in a fun format. ' +
             'During the development of this website I have improved my skills in frontend technologies and in making responsive web applications. I have also created my very first game!',
         technologies: [
             { name: 'JavaScript', icon: faSquareJs },

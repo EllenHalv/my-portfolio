@@ -12,7 +12,7 @@ const About = () => (
             <br/>
             <div className={styles.aboutContainer}>
                 <div className={styles.textContainer}>
-                    <p className={styles.description}>Hi, I'm Ellen Halvardsson, a software developer with a passion for full-stack development and cloud technologies.
+                    <p className={styles.description}>Hi, I'm Elllllen Halvardsson, a software developer with a passion for full-stack development and cloud technologies.
                         I thrive on creativity and problem-solving, and strive to combine technical skills with innovative thinking to build solutions that improve everyday life.
                     </p>
                     <p className={styles.description}>Beyond coding, I enjoy crafting and exploring ways to express myself through design and technology. I enjoy knitting, crocheting, digital design and taking care of my plants,

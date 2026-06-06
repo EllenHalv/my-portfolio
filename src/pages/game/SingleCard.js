@@ -19,7 +19,7 @@ export default function SingleCard({ card, handleChoice, flipped, disabled }) {
                 <div className={"fadeInText"}>
                     <img
                         className="back"
-                        src="/images/game/back.png"
+                        src="/images/game/squid-game/back.png"
                         onClick={handleClick}
                         alt="card back"
                     />

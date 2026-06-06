@@ -3,12 +3,12 @@ import SingleCard from './SingleCard'
 import styles from './Game.module.css';
 
 const cardImages = [
-    { "src": "../images/game/frontman.png", matched: false },
-    { "src": "../images/game/circle.png", matched: false },
-    { "src": "../images/game/square.png", matched: false },
-    { "src": "../images/game/star.png", matched: false },
-    { "src": "../images/game/triangle.png", matched: false },
-    { "src": "../images/game/umbrella.png", matched: false },
+    { "src": "../images/game/squid-game/frontman.png", matched: false },
+    { "src": "../images/game/squid-game/circle.png", matched: false },
+    { "src": "../images/game/squid-game/square.png", matched: false },
+    { "src": "../images/game/squid-game/star.png", matched: false },
+    { "src": "../images/game/squid-game/triangle.png", matched: false },
+    { "src": "../images/game/squid-game/umbrella.png", matched: false },
 ]
 
 // Space animal cards

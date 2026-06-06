@@ -16,7 +16,7 @@ const Home = () => (
             <div className={styles.fadeInText}>
                 <div className={styles.homeLinks}>
                     <a href="/projects">
-                        Explore my projects <FontAwesomeIcon icon={faArrowRight}/>
+                        Explore my projects :D <FontAwesomeIcon icon={faArrowRight}/>
                     </a>
                     <a href="/about">
                         Learn more <FontAwesomeIcon icon={faArrowRight}/>
